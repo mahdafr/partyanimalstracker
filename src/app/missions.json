@@ -1,0 +1,28 @@
+{
+    "woof_daily" : [
+        {"required":15, "prompt": "wk1", "reward": "1000 XP"},
+        {"required":5, "prompt": "wk2", "reward": "2000 XP"},
+        {"required":2, "prompt": "wk3", "reward": "3000 cookies"}
+    ],
+    "woof_weekly" : [
+        {"required":15, "prompt": "wk1", "reward": "TURTLES XP"},
+        {"required":5, "prompt": "wk2", "reward": "2000 XP"},
+        {"required":2, "prompt": "wk3", "reward": "3000 cookies"}
+    ],
+    "meow_daily" : [
+        {"required":15, "prompt": "wk1", "reward": "1000 XP"},
+        {"required":5, "prompt": "wk2", "reward": "2000 XP"},
+        {"required":2, "prompt": "wk3", "reward": "3000 cookies"}
+    ],
+    "meow_weekly" : [
+        {"required":15, "prompt": "wk1", "reward": "1000 XP"},
+        {"required":5, "prompt": "wk2", "reward": "2000 XP"},
+        {"required":2, "prompt": "wk3", "reward": "3000 cookies"}
+    ],
+    "weeklies" : [
+        {"required":15, "prompt": "wk1", "reward": "1000 XP"},
+        {"required":5, "prompt": "wk2", "reward": "2000 XP"},
+        {"required":2, "prompt": "wk3", "reward": "3000 cookies"},
+        {"required":5, "prompt": "wk4", "reward": "3000 XP"}
+    ]
+}
