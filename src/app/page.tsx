@@ -3,6 +3,12 @@ import { Columns } from "./columns"
 import { DataTable } from "./datatable"
 import { promises as fs } from 'fs';
 
+import { Menu, Linkedin, Instagram, Globe } from "lucide-react"
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui/alert"
 import {
   Tabs,
   TabsContent,
@@ -23,6 +29,17 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { Button } from "@/components/ui/button"
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
 export default async function Page() {
   const file = await fs.readFile(process.cwd() + '/src/app/missions.json', 'utf8');
@@ -35,10 +52,43 @@ export default async function Page() {
 
   return (
     <div className="vertical-align justify-center items-center justify-between space-x-2 px-5 py-5">
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button variant="outline" size="icon">
+            <Menu className="h-4 w-4" />
+          </Button>
+        </SheetTrigger>
+        <SheetContent>
+          <SheetHeader>
+            <SheetTitle>About</SheetTitle>
+            <Alert>
+              <AlertTitle>Thanks for your patience!</AlertTitle>
+              <AlertDescription>
+                This application is a work in progress and updates are rolled out regularly.
+              </AlertDescription>
+            </Alert>
+            <SheetDescription>
+            </SheetDescription>
+          </SheetHeader>
+          
+          This is my first project building a web application and building in NextJS! 
+          So, I'd love to give a big shoutout to the developer for the <a href="https://www.paliatracker.com" >Palia Tracker</a> application that inspired this website. 
+          I love everything about that project, especially the interface and design which inspired me to use the same libraries for this project.
+          <SheetFooter>
+            <SheetClose asChild/>
+            <div className="grid grid-cols-4 items-center gap-4">
+              <a href="https://www.linkedin.com/in/mahdafr"><Button><Linkedin/></Button></a>
+              <a href="https://www.instagram.com/mahdafr13/"><Button><Instagram/></Button></a>
+              <a href="http://mahdafr.com/"><Button><Globe/></Button></a>
+            </div>
+          </SheetFooter>
+        </SheetContent>
+      </Sheet>
+
       {/* title and description */}
       <div className="space-y-5">
         <p className="text-3xl font-large">Party Animals Missions Tracker</p>
-        <Separator className="my-4" />
+        
         <p className="text-xl text-muted-foreground">
           An online tool to track your mission progress for Party Animals.
         </p>
@@ -135,6 +185,8 @@ export default async function Page() {
           </Card>
         </TabsContent>
       </Tabs>
+    
+      {/* <Separator className="my-4" /> */}
     </div>
   )
 }
