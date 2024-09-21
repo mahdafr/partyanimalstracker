@@ -12,7 +12,13 @@ export type Mission = {
     due: Date
 }
 
-export function getMissions(data_json: Array<T>, count: number, event: boolean, daily: boolean): Array<Mission> {
+type JSONMission = {
+    required: number
+    prompt: string
+    reward: string
+}
+
+export function getMissions(data_json: Array<JSONMission>, count: number, event: boolean, daily: boolean): Array<Mission> {
     var mission_list:Mission[] = new Array<Mission>;
     var today:Date = new Date();
     var today_string:string = today.toDateString();
