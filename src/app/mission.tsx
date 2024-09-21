@@ -48,7 +48,8 @@ export function getMissions(data_json: Array<JSONMission>, count: number, event:
 
 // load from cookies; if CNF, progress is 0
 function getProgress(id: string) : number {
-    return ( hasCookie(id) ) ? parseInt(getCookie(id)!) : 0
+    // return ( hasCookie(id) ) ? parseInt(getCookie(id)!) : 0
+    return 0
 }
 
 // finds the next Sunday (not including today, if Sunday)

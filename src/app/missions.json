@@ -1,28 +1,28 @@
 {
     "woof_daily" : [
-        {"required":15, "prompt": "wk1", "reward": "1000 XP"},
-        {"required":5, "prompt": "wk2", "reward": "2000 XP"},
-        {"required":2, "prompt": "wk3", "reward": "3000 cookies"}
+        {"required":1, "prompt": "Use a Team Woof member in 1 game", "reward": "700 XP"},
+        {"required":5, "prompt": "Use a Team Woof member and use 15 items in Nemo Kart", "reward": "800 XP"},
+        {"required":2, "prompt": "Use a Team Woof member and win 1 round in Last Stand", "reward": "900 XP"}
     ],
     "woof_weekly" : [
-        {"required":15, "prompt": "wk1", "reward": "TURTLES XP"},
-        {"required":5, "prompt": "wk2", "reward": "2000 XP"},
-        {"required":2, "prompt": "wk3", "reward": "3000 cookies"}
+        {"required":30, "prompt": "Use a Team Woof member and use 30 items in Nemo Kart", "reward": "1600 XP"},
+        {"required":5, "prompt": "Use a Team Woof member and knock out 5 opponents with Melee Weapons in total", "reward": "1600 XP"},
+        {"required":3, "prompt": "Use 3 different Team Woof members to play games", "reward": "4000 XP"}
     ],
     "meow_daily" : [
-        {"required":15, "prompt": "wk1", "reward": "1000 XP"},
-        {"required":5, "prompt": "wk2", "reward": "2000 XP"},
-        {"required":2, "prompt": "wk3", "reward": "3000 cookies"}
+        {"required":15, "prompt": "TBD", "reward": "TBD"},
+        {"required":5, "prompt": "TBD", "reward": "TBD"},
+        {"required":2, "prompt": "TBD", "reward": "TBD"}
     ],
     "meow_weekly" : [
-        {"required":15, "prompt": "wk1", "reward": "1000 XP"},
-        {"required":5, "prompt": "wk2", "reward": "2000 XP"},
-        {"required":2, "prompt": "wk3", "reward": "3000 cookies"}
+        {"required":15, "prompt": "TBD", "reward": "TBD"},
+        {"required":5, "prompt": "TBD", "reward": "TBD"},
+        {"required":2, "prompt": "TBD", "reward": "TBD"}
     ],
     "weeklies" : [
-        {"required":15, "prompt": "wk1", "reward": "1000 XP"},
-        {"required":5, "prompt": "wk2", "reward": "2000 XP"},
-        {"required":2, "prompt": "wk3", "reward": "3000 cookies"},
-        {"required":5, "prompt": "wk4", "reward": "3000 XP"}
+        {"required":15, "prompt": "Knock out 15 opponents with Punch in total", "reward": "1000 XP"},
+        {"required":5, "prompt": "Use 5 edible items in total in Last Stand maps", "reward": "2000 XP"},
+        {"required":2, "prompt": "Use a fluffy animal and win 2 Quick Matches", "reward": "3000 cookies"},
+        {"required":5, "prompt": "Use an egg laying animal in 5 Last Stand Quick Matches", "reward": "3000 XP"}
     ]
 }
