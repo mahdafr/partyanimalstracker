@@ -74,10 +74,10 @@ export default async function Page() {
       <Sheet>
         <SheetTrigger asChild>
         <Button variant="outline" size="icon">
-              <Menu className="h-7 w-7" />
-            </Button>
+          <Menu className="h-7 w-7"/>
+        </Button>
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent className="sm:max-w-md">
           <SheetHeader>
             <SheetTitle className={concertone.className}>About</SheetTitle>
             <Alert>
@@ -86,22 +86,21 @@ export default async function Page() {
                 This application is a work in progress and updates are rolled out regularly.
               </AlertDescription>
             </Alert>
-            <SheetDescription>
+            <SheetDescription className="w-full">
+              <div className={playpen.className}><em><div className="text-xl">
+                Thanks for using my first project building a web application in NextJS!
+              </div></em></div>
+              <div className="center space-x-2 px-2 py-5">
+                I'd love to give a big shoutout to the developer for the <a href="https://www.paliatracker.com" >Palia Tracker</a> project that has inpired me with its beautiful interface and awesome libraries.
+              </div>
             </SheetDescription>
-          </SheetHeader>
-          <div className={playpen.className}><b>
-            Thanks for using my first project building a web application in NextJS!
-          </b></div>
-          <p> </p>
-          <div>
-            I'd love to give a big shoutout to the developer for the <a href="https://www.paliatracker.com" >Palia Tracker</a> project that inspired this project.
-          </div>
-          <SheetFooter>
+            </SheetHeader>
+          <SheetFooter className="">
             <SheetClose/>
-            <div className="grid grid-cols-4 items-center gap-4">
-              <a href="https://www.linkedin.com/in/mahdafr"><Button><Linkedin/></Button></a>
-              <a href="https://www.instagram.com/mahdafr13/"><Button><Instagram/></Button></a>
-              <a href="http://mahdafr.com/"><Button><Globe/></Button></a>
+            <div className="wrapper">
+              <div><a href="https://www.linkedin.com/in/mahdafr"><Button><Linkedin/></Button></a></div>
+              <div><a href="https://www.instagram.com/mahdafr13/"><Button><Instagram/></Button></a></div>
+              <div><a href="http://mahdafr.com/"><Button><Globe/></Button></a></div>
             </div>
           </SheetFooter>
         </SheetContent>
@@ -109,11 +108,13 @@ export default async function Page() {
 
       {/* title and description */}
       <div className="space-y-5">
-        <h1 className={concertone.className}>
-          <p className="text-5xl text-orange">PARTY ANIMALS Tracker</p>
-        </h1>
+        <div className={concertone.className}>
+          <h1 className="text-5xl">PARTY ANIMALS TRACKER</h1>
+        </div>
         <p className="text-xl text-muted-foreground">
-          An online tool to track your mission progress for Party Animals.
+          {/* <div ><em> */}
+            An online tool to track your progress towards Daily and Weekly Missions in Party Animals.
+          {/* </em></div> */}
         </p>
         <div className="row-gap: 200px"></div>
       </div>
@@ -122,14 +123,11 @@ export default async function Page() {
       <Tabs defaultValue="daily">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="daily">
-            <div className={jua.className}>
-              <div className="text-xl"><b>DAILY</b></div>
-            </div>
+            <div className={jua.className}><b>DAILY</b></div>
           </TabsTrigger>
           <TabsTrigger value="weekly">
-            <div className={jua.className}>
-              <div className="text-xl"><b>WEEKLY</b></div>
-            </div></TabsTrigger>
+            <div className={jua.className}><b>WEEKLY</b></div>
+          </TabsTrigger>
         </TabsList>
 
         {/* dailies */}
@@ -173,10 +171,10 @@ export default async function Page() {
           <Card>
             <CardHeader>
               <CardTitle><div className={jua.className}>Weekly Missions</div></CardTitle>
-              <CardDescription>
-                Track your weekly Party Animals missions here.
-              </CardDescription>
             </CardHeader>
+            <CardDescription>
+              Track your weekly Party Animals missions here.
+            </CardDescription>
             <CardContent className="space-y-2">
               {/* non-event weekly missions */}
               <Accordion type="single" collapsible className="w-full">

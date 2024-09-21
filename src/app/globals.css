@@ -4,20 +4,20 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --background: 52 55.56% 94.71%;
+    --foreground: 25.52 70.73% 51.76%;
+    --card: 52 55.56% 99%;
+    --card-foreground: 30 1.14% 34.51%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
+    --primary: 30.34 84.76% 58.82%;
+    --primary-foreground: 220.15 71.89% 63.73%;
+    --secondary: 46.67 95.74% 90.78%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 30.34 84.76% 58.82%;
+    --muted-foreground: 270 2.22% 35.29%;
+    --accent: 24 21.74% 95.49%;
+    --accent-foreground: 221.63 94.12% 66.67%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
@@ -32,18 +32,18 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --background: 40 3% 35%;
+    --foreground: 60 5% 94%;
+    --card: rgb(255,233,118) 100% 0%;
+    --card-foreground: rgb(255,233,118) 100% 0%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
@@ -74,6 +74,40 @@ p {
   text-align: center;
 }
 
+h1 {
+  margin:auto;
+  width:50%;
+  text-align: center;
+}
+
+h2 {
+  margin:auto;
+  width:50%;
+  text-align: center;
+  color: rgb(238,140,65);
+  fill: rgb(238,140,65);
+}
+
+h4 {
+  /* margin:auto; */
+  width:50%;
+  /* text-align: center; */
+  color: rgb(255,233,118)
+}
+
+
+
+.wrapper {
+  display: grid;
+  position: relative;
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr; */
+  column-gap: width;
+  row-gap: 1em;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
 
 a:link {
   color: blue;
