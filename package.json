@@ -1,5 +1,5 @@
 {
-  "name": "my-next-app-ts",
+  "name": "party-animals-tracker",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,16 +9,33 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.0",
+    "@radix-ui/react-checkbox": "^1.1.1",
+    "@radix-ui/react-collapsible": "^1.1.0",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-separator": "^1.1.0",
+    "@radix-ui/react-slider": "^1.2.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.0",
+    "@tanstack/react-table": "^8.20.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "cookies-next": "^4.2.1",
+    "csv-parse": "^5.5.6",
+    "lucide-react": "^0.427.0",
+    "next": "^14.2.13",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.5"
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript-cookie": "^1.0.6"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
