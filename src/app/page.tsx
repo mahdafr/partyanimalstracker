@@ -1,4 +1,4 @@
-import { Mission, getMissions } from "./mission"
+import { getMissions } from "./mission"
 import { Columns } from "./columns"
 import { DataTable } from "./datatable"
 import { promises as fs } from 'fs';
@@ -40,6 +40,25 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { Concert_One, Playpen_Sans, Jua } from "next/font/google";
+
+const concertone = Concert_One({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "400",
+})
+
+const playpen = Playpen_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "400",
+})
+
+const jua = Jua({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "400",
+})
 
 export default async function Page() {
   const file = await fs.readFile(process.cwd() + '/src/app/missions.json', 'utf8');
@@ -54,15 +73,15 @@ export default async function Page() {
     <div className="vertical-align justify-center items-center justify-between space-x-2 px-5 py-5">
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="outline" size="icon">
-            <Menu className="h-4 w-4" />
-          </Button>
+        <Button variant="outline" size="icon">
+              <Menu className="h-7 w-7" />
+            </Button>
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle>About</SheetTitle>
+            <SheetTitle className={concertone.className}>About</SheetTitle>
             <Alert>
-              <AlertTitle>Thanks for your patience!</AlertTitle>
+              <AlertTitle  className={playpen.className}>Thanks for your patience!</AlertTitle>
               <AlertDescription>
                 This application is a work in progress and updates are rolled out regularly.
               </AlertDescription>
@@ -70,12 +89,15 @@ export default async function Page() {
             <SheetDescription>
             </SheetDescription>
           </SheetHeader>
-          
-          This is my first project building a web application and building in NextJS! 
-          So, I'd love to give a big shoutout to the developer for the <a href="https://www.paliatracker.com" >Palia Tracker</a> application that inspired this website. 
-          I love everything about that project, especially the interface and design which inspired me to use the same libraries for this project.
+          <div className={playpen.className}><b>
+            Thanks for using my first project building a web application in NextJS!
+          </b></div>
+          <p> </p>
+          <div>
+            I'd love to give a big shoutout to the developer for the <a href="https://www.paliatracker.com" >Palia Tracker</a> project that inspired this project.
+          </div>
           <SheetFooter>
-            <SheetClose asChild/>
+            <SheetClose/>
             <div className="grid grid-cols-4 items-center gap-4">
               <a href="https://www.linkedin.com/in/mahdafr"><Button><Linkedin/></Button></a>
               <a href="https://www.instagram.com/mahdafr13/"><Button><Instagram/></Button></a>
@@ -87,8 +109,9 @@ export default async function Page() {
 
       {/* title and description */}
       <div className="space-y-5">
-        <p className="text-3xl font-large">Party Animals Missions Tracker</p>
-        
+        <h1 className={concertone.className}>
+          <p className="text-5xl text-orange">PARTY ANIMALS Tracker</p>
+        </h1>
         <p className="text-xl text-muted-foreground">
           An online tool to track your mission progress for Party Animals.
         </p>
@@ -96,23 +119,30 @@ export default async function Page() {
       </div>
 
       {/* the Dailies and Weeklies tabs */}
-      <Tabs defaultValue="daily" className="w">
+      <Tabs defaultValue="daily">
         <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="daily">Daily</TabsTrigger>
-          <TabsTrigger value="weekly">Weekly</TabsTrigger>
+          <TabsTrigger value="daily">
+            <div className={jua.className}>
+              <div className="text-xl"><b>DAILY</b></div>
+            </div>
+          </TabsTrigger>
+          <TabsTrigger value="weekly">
+            <div className={jua.className}>
+              <div className="text-xl"><b>WEEKLY</b></div>
+            </div></TabsTrigger>
         </TabsList>
 
         {/* dailies */}
         <TabsContent value="daily">
           <Card>
             <CardHeader>
-              <CardTitle>Daily Missions</CardTitle>
+              <CardTitle><div className={jua.className}>Daily Missions</div></CardTitle>
             </CardHeader>
             <CardDescription>
               Track your daily Party Animals missions here.
             </CardDescription>
             <CardContent className="space-y-2">
-              {/* non-event daily missions */}
+              {/* event daily missions */}
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1">
                   <AccordionTrigger>Woof Faction Missions</AccordionTrigger>
@@ -142,7 +172,7 @@ export default async function Page() {
         <TabsContent value="weekly">
           <Card>
             <CardHeader>
-              <CardTitle>Weekly Missions</CardTitle>
+              <CardTitle><div className={jua.className}>Weekly Missions</div></CardTitle>
               <CardDescription>
                 Track your weekly Party Animals missions here.
               </CardDescription>

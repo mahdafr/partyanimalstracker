@@ -74,6 +74,7 @@ p {
   text-align: center;
 }
 
+
 a:link {
   color: blue;
   background-color: transparent;
@@ -96,4 +97,14 @@ a:active {
   color: red;
   background-color: transparent;
   text-decoration: underline;
+}
+
+div {
+  float: none;
+}
+
+.fillwidth {
+  background: white;
+  text-align: left;
+  overflow: hidden;
 }
