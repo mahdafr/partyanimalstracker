@@ -75,4 +75,4 @@ const Header2: React.FC = () => {
     );
   }
 
-export default Header;
+// export default Header;
