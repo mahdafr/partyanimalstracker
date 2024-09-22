@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { ColumnDef } from "@tanstack/react-table"
-import { getMissions, Mission } from "./mission"
+import { Mission } from "./mission"
 import { update, getProgress } from "./cookies"
 import { Slider } from "@/components/ui/slider"
 

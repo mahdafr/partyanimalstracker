@@ -39,7 +39,6 @@ export function getMissions(data_json: Array<JSONMission>, count: number, event:
         // add to the cookies and accumulate
         mission_list.push(mission)
     }
-
     return mission_list;
 }
 
