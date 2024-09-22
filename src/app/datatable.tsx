@@ -32,7 +32,7 @@ export function DataTable<TData, TValue>({
   })
 
   return (
-    <div className="rounded-md border">
+    <div className="rounded-md border w-full" style={{padding: 0}}>
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -68,7 +68,7 @@ export function DataTable<TData, TValue>({
             ))
           ) : (
             <TableRow>
-              <TableCell colSpan={columns.length} className="h-50 text-center"/>
+              <TableCell colSpan={columns.length} className="text-center"/>
             </TableRow>
           )}
         </TableBody>

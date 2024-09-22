@@ -1,7 +1,7 @@
 "use client"
 
 import { Mission } from './mission'
-import { getCookie, setCookie, hasCookie, getCookies } from 'cookies-next';
+import { getCookie, setCookie, hasCookie } from 'cookies-next';
 
 // load from cookies; if CNF, progress is 0
 export function getProgress(id: string) : number {
@@ -11,5 +11,5 @@ export function getProgress(id: string) : number {
 // bake a cookie with this new info
 export function update(mission: Mission, progress: number) : void {
     mission.progress = progress
-    setCookie(mission.id, mission.progress.toString())
+    setCookie(mission.id, mission.progress.toString(), {maxAge : 604800})
 }

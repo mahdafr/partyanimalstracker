@@ -1,4 +1,4 @@
-import * as data from './id'
+import { getId } from './id'
 
 // the Mission object
 export type Mission = {
@@ -23,7 +23,7 @@ export function getMissions(data_json: Array<JSONMission>, count: number, event:
 
     for ( let i=0 ; i<count ; i++ ) {
         // generate the unique id for this mission
-        var id:string = data.getId(today.toLocaleDateString(), event, daily, group, i);
+        var id:string = getId(today.toLocaleDateString(), event, daily, group, i);
 
         // find this mission in the cookies; if not found, make a new mission
         var mission:Mission = {

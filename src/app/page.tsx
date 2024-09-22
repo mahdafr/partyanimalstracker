@@ -1,17 +1,11 @@
 import { getMissions } from "./mission"
-import { Columns } from "./columns"
-import { DataTable } from "./datatable"
+import { ThemeButton } from "./button_theme"
+import { Sidebar } from "./sidebar_about"
+import { AccordionM } from "./accordion"
+import { concertone, jua } from "./fonts"
 import { promises as fs } from 'fs';
 
-import { Menu, Linkedin, Instagram, Globe } from "lucide-react"
-import { Concert_One, Playpen_Sans, Jua } from "next/font/google";
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@/components/ui/alert"
-import { Label } from "@/components/ui/label"
-import { Switch } from "@/components/ui/switch"
+import { Separator } from "@/components/ui/separator"
 import {
   Tabs,
   TabsContent,
@@ -25,45 +19,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
-import { Button } from "@/components/ui/button"
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
 
-const concertone = Concert_One({
-  subsets: ["latin"],
-  display: "swap",
-  weight: "400",
-  preload: false,
-})
-
-const playpen = Playpen_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  weight: "400",
-  preload: false,
-})
-
-const jua = Jua({
-  subsets: ["latin"],
-  display: "swap",
-  weight: "400",
-  preload: false,
-})
 
 export default async function Page() {
   const file = await fs.readFile(process.cwd() + '/src/app/missions.json', 'utf8');
@@ -73,53 +29,13 @@ export default async function Page() {
   const meow_dailies = getMissions(data_json["meow_daily"], 3, true, true, "meow_daily");
   const meow_weeklies = getMissions(data_json["meow_weekly"], 3, true, false, "meow_weekly");
   const weeklies = getMissions(data_json["weeklies"], 4, false, false, "weeklies");
-  const theme = "Dark Theme"
 
   return (
-    <div className="vertical-align justify-center items-center justify-between space-x-2 px-5 py-5">
-      <Sheet>
-        <SheetTrigger asChild>
-        <Button variant="secondary" size="icon">
-          <Menu className="h-7 w-7"/>
-        </Button>
-        </SheetTrigger>
-        <SheetContent className="w-[400px] sm:w-[540px]">
-          <SheetHeader>
-            <SheetTitle className={concertone.className}>
-              <h1 className="text-2xl">About</h1>
-              {/* <div className="flex items-center space-x-2">
-                <Switch id="theme"/>
-                  checked={}
-                  onCheckedChange={}/>
-                <Label htmlFor="theme">{theme}</Label>
-              </div> */}
-            </SheetTitle>
-            <Alert>
-              <AlertTitle className={playpen.className}><h4>Thanks for your patience!</h4></AlertTitle>
-              <AlertDescription>
-                <h5>This application is a work in progress and updates are rolled out regularly.</h5>
-              </AlertDescription>
-            </Alert>
-            <SheetDescription className="w-full center justify-between space-x-2 px-2 py-2">
-              <div className={playpen.className}><div className="text-xl">
-                Thanks for using my first project building a web application in NextJS!
-              </div></div>
-              <div className="center space-x-2 px-2 py-5">
-                I'd love to give a shoutout to the developer for the <a href="https://www.paliatracker.com" >Palia Tracker</a> project that has inpired me with its beautiful interface and awesome libraries.
-              </div>
-              <a href="https://www.linkedin.com/in/mahdafr">
-                <Button variant="ghost"><Linkedin/></Button></a>
-              <a href="https://www.instagram.com/mahdafr13/">
-                <Button variant="ghost"><Instagram/></Button></a>
-              <a href="http://mahdafr.com/">
-                <Button variant="ghost"><Globe/></Button></a>
-            </SheetDescription>
-            </SheetHeader>
-          <SheetFooter>
-            <SheetClose/>
-          </SheetFooter>
-        </SheetContent>
-      </Sheet>
+    <div className="space-x-2 px-5 py-5">
+      <div className="navigation">
+        <Sidebar/>
+        <ThemeButton/>
+      </div>
 
       {/* title and description */}
       <div className="space-y-5">
@@ -127,9 +43,7 @@ export default async function Page() {
           <h1 className="text-5xl">PARTY ANIMALS TRACKER</h1>
         </div>
         <p className="text-xl text-muted-foreground">
-          {/* <div ><em> */}
             An online tool to track your progress towards Daily and Weekly Missions in Party Animals.
-          {/* </em></div> */}
         </p>
         <div className="row-gap: 200px"></div>
       </div>
@@ -154,29 +68,9 @@ export default async function Page() {
             <CardDescription>
               Track your daily Party Animals missions here.
             </CardDescription>
-            <CardContent className="space-y-2">
-              {/* event daily missions */}
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>Woof Faction Missions</AccordionTrigger>
-                  <AccordionContent>
-                    <div className="container mx-auto py-10">
-                      <DataTable columns={Columns} data={woof_dailies} />
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-              {/* event daily missions */}
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>Meow Faction Missions</AccordionTrigger>
-                  <AccordionContent>
-                    <div className="container mx-auto py-10">
-                      <DataTable columns={Columns} data={meow_dailies} />
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
+            <CardContent className="space-y-">
+              <AccordionM title="Woof Faction Missions" data={woof_dailies} />
+              <AccordionM title="Meow Faction Missions" data={meow_dailies} />
             </CardContent>
           </Card>
         </TabsContent>
@@ -192,38 +86,10 @@ export default async function Page() {
             </CardDescription>
             <CardContent className="space-y-2">
               {/* non-event weekly missions */}
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>Missions</AccordionTrigger>
-                  <AccordionContent>
-                    <div className="container mx-auto py-10">
-                      <DataTable columns={Columns} data={weeklies} />
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
+              <AccordionM title="Weekly Missions" data={weeklies} />
               {/* event weekly missions */}
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>Woof Faction Missions</AccordionTrigger>
-                  <AccordionContent>
-                    <div className="container mx-auto py-10">
-                      <DataTable columns={Columns} data={woof_weeklies} />
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-              {/* event weekly missions */}
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>Meow Faction Missions</AccordionTrigger>
-                  <AccordionContent>
-                    <div className="container mx-auto py-10">
-                      <DataTable columns={Columns} data={meow_weeklies} />
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
+              <AccordionM title="Woof Faction Missions" data={woof_weeklies} />
+              <AccordionM title="Meow Faction Missions" data={meow_weeklies} />
             </CardContent>
           </Card>
         </TabsContent>
