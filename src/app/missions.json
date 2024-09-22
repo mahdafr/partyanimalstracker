@@ -1,8 +1,8 @@
 {
     "woof_daily" : [
         {"required":1, "prompt": "Use a Team Woof member in 1 game", "reward": "700 XP"},
-        {"required":5, "prompt": "Use a Team Woof member and use 15 items in Nemo Kart", "reward": "800 XP"},
-        {"required":2, "prompt": "Use a Team Woof member and win 1 round in Last Stand", "reward": "900 XP"}
+        {"required":15, "prompt": "Use a Team Woof member and use 15 items in Nemo Kart", "reward": "800 XP"},
+        {"required":1, "prompt": "Use a Team Woof member and win 1 round in Last Stand", "reward": "900 XP"}
     ],
     "woof_weekly" : [
         {"required":30, "prompt": "Use a Team Woof member and use 30 items in Nemo Kart", "reward": "1600 XP"},
@@ -10,14 +10,14 @@
         {"required":3, "prompt": "Use 3 different Team Woof members to play games", "reward": "4000 XP"}
     ],
     "meow_daily" : [
-        {"required":15, "prompt": "TBD", "reward": "TBD"},
-        {"required":5, "prompt": "TBD", "reward": "TBD"},
-        {"required":2, "prompt": "TBD", "reward": "TBD"}
+        {"required":0, "prompt": "TBD", "reward": "TBD"},
+        {"required":0, "prompt": "TBD", "reward": "TBD"},
+        {"required":0, "prompt": "TBD", "reward": "TBD"}
     ],
     "meow_weekly" : [
-        {"required":15, "prompt": "TBD", "reward": "TBD"},
-        {"required":5, "prompt": "TBD", "reward": "TBD"},
-        {"required":2, "prompt": "TBD", "reward": "TBD"}
+        {"required":0, "prompt": "TBD", "reward": "TBD"},
+        {"required":0, "prompt": "TBD", "reward": "TBD"},
+        {"required":0, "prompt": "TBD", "reward": "TBD"}
     ],
     "weeklies" : [
         {"required":15, "prompt": "Knock out 15 opponents with Punch in total", "reward": "1000 XP"},

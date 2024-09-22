@@ -1,5 +1,4 @@
-import { getCookie, setCookie, hasCookie } from 'cookies-next';
-import * as data from './data'
+import * as data from './id'
 
 // the Mission object
 export type Mission = {
@@ -18,20 +17,19 @@ type JSONMission = {
     reward: string
 }
 
-export function getMissions(data_json: Array<JSONMission>, count: number, event: boolean, daily: boolean): Array<Mission> {
+export function getMissions(data_json: Array<JSONMission>, count: number, event: boolean, daily: boolean, group: string): Array<Mission> {
     var mission_list:Mission[] = new Array<Mission>;
     var today:Date = new Date();
-    var today_string:string = today.toDateString();
 
     for ( let i=0 ; i<count ; i++ ) {
         // generate the unique id for this mission
-        var id:string = data.getId(today_string, event, daily, i);
+        var id:string = data.getId(today.toLocaleDateString(), event, daily, group, i);
 
         // find this mission in the cookies; if not found, make a new mission
         var mission:Mission = {
             id: id,
             prompt: data_json[i]["prompt"],
-            progress: getProgress(id),
+            progress: 0,
             required: data_json[i]["required"],
             reward: data_json[i]["reward"],
             date: today,
@@ -39,17 +37,10 @@ export function getMissions(data_json: Array<JSONMission>, count: number, event:
         }
 
         // add to the cookies and accumulate
-        update(mission, i)
         mission_list.push(mission)
     }
 
     return mission_list;
-}
-
-// load from cookies; if CNF, progress is 0
-function getProgress(id: string) : number {
-    // return ( hasCookie(id) ) ? parseInt(getCookie(id)!) : 0
-    return 0
 }
 
 // finds the next Sunday (not including today, if Sunday)
@@ -57,10 +48,4 @@ function getNextSunday() : Date {
     var d = new Date();
     d.setDate(d.getDate() + (((7 - d.getDay()) % 7) || 7));
     return d;
-}
-
-// bake a cookie with this new info
-export async function update(mission: Mission, progress: number) : Promise<void> {
-    mission.progress = progress
-    setCookie(mission.id, mission.progress.toString())
 }

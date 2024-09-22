@@ -4,11 +4,14 @@ import { DataTable } from "./datatable"
 import { promises as fs } from 'fs';
 
 import { Menu, Linkedin, Instagram, Globe } from "lucide-react"
+import { Concert_One, Playpen_Sans, Jua } from "next/font/google";
 import {
   Alert,
   AlertDescription,
   AlertTitle,
 } from "@/components/ui/alert"
+import { Label } from "@/components/ui/label"
+import { Switch } from "@/components/ui/switch"
 import {
   Tabs,
   TabsContent,
@@ -40,68 +43,80 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { Concert_One, Playpen_Sans, Jua } from "next/font/google";
 
 const concertone = Concert_One({
   subsets: ["latin"],
   display: "swap",
   weight: "400",
+  preload: false,
 })
 
 const playpen = Playpen_Sans({
   subsets: ["latin"],
   display: "swap",
   weight: "400",
+  preload: false,
 })
 
 const jua = Jua({
   subsets: ["latin"],
   display: "swap",
   weight: "400",
+  preload: false,
 })
 
 export default async function Page() {
   const file = await fs.readFile(process.cwd() + '/src/app/missions.json', 'utf8');
   const data_json = JSON.parse(file);
-  const woof_dailies = getMissions(data_json["woof_daily"], 3, true, true);
-  const woof_weeklies = getMissions(data_json["woof_weekly"], 3, true, false);
-  const meow_dailies = getMissions(data_json["meow_daily"], 3, true, true);
-  const meow_weeklies = getMissions(data_json["meow_weekly"], 3, true, false);
-  const weeklies = getMissions(data_json["weeklies"], 4, false, false);
+  const woof_dailies = getMissions(data_json["woof_daily"], 3, true, true, "woof_daily");
+  const woof_weeklies = getMissions(data_json["woof_weekly"], 3, true, false, "woof_weekly");
+  const meow_dailies = getMissions(data_json["meow_daily"], 3, true, true, "meow_daily");
+  const meow_weeklies = getMissions(data_json["meow_weekly"], 3, true, false, "meow_weekly");
+  const weeklies = getMissions(data_json["weeklies"], 4, false, false, "weeklies");
+  const theme = "Dark Theme"
 
   return (
     <div className="vertical-align justify-center items-center justify-between space-x-2 px-5 py-5">
       <Sheet>
         <SheetTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button variant="secondary" size="icon">
           <Menu className="h-7 w-7"/>
         </Button>
         </SheetTrigger>
-        <SheetContent className="sm:max-w-md">
+        <SheetContent className="w-[400px] sm:w-[540px]">
           <SheetHeader>
-            <SheetTitle className={concertone.className}>About</SheetTitle>
+            <SheetTitle className={concertone.className}>
+              <h1 className="text-2xl">About</h1>
+              {/* <div className="flex items-center space-x-2">
+                <Switch id="theme"/>
+                  checked={}
+                  onCheckedChange={}/>
+                <Label htmlFor="theme">{theme}</Label>
+              </div> */}
+            </SheetTitle>
             <Alert>
-              <AlertTitle  className={playpen.className}>Thanks for your patience!</AlertTitle>
+              <AlertTitle className={playpen.className}><h4>Thanks for your patience!</h4></AlertTitle>
               <AlertDescription>
-                This application is a work in progress and updates are rolled out regularly.
+                <h5>This application is a work in progress and updates are rolled out regularly.</h5>
               </AlertDescription>
             </Alert>
-            <SheetDescription className="w-full">
-              <div className={playpen.className}><em><div className="text-xl">
+            <SheetDescription className="w-full center justify-between space-x-2 px-2 py-2">
+              <div className={playpen.className}><div className="text-xl">
                 Thanks for using my first project building a web application in NextJS!
-              </div></em></div>
+              </div></div>
               <div className="center space-x-2 px-2 py-5">
-                I'd love to give a big shoutout to the developer for the <a href="https://www.paliatracker.com" >Palia Tracker</a> project that has inpired me with its beautiful interface and awesome libraries.
+                I'd love to give a shoutout to the developer for the <a href="https://www.paliatracker.com" >Palia Tracker</a> project that has inpired me with its beautiful interface and awesome libraries.
               </div>
+              <a href="https://www.linkedin.com/in/mahdafr">
+                <Button variant="ghost"><Linkedin/></Button></a>
+              <a href="https://www.instagram.com/mahdafr13/">
+                <Button variant="ghost"><Instagram/></Button></a>
+              <a href="http://mahdafr.com/">
+                <Button variant="ghost"><Globe/></Button></a>
             </SheetDescription>
             </SheetHeader>
-          <SheetFooter className="">
+          <SheetFooter>
             <SheetClose/>
-            <div className="wrapper">
-              <div><a href="https://www.linkedin.com/in/mahdafr"><Button><Linkedin/></Button></a></div>
-              <div><a href="https://www.instagram.com/mahdafr13/"><Button><Instagram/></Button></a></div>
-              <div><a href="http://mahdafr.com/"><Button><Globe/></Button></a></div>
-            </div>
           </SheetFooter>
         </SheetContent>
       </Sheet>
@@ -214,7 +229,10 @@ export default async function Page() {
         </TabsContent>
       </Tabs>
     
-      {/* <Separator className="my-4" /> */}
+      <Separator className="my-4" />
+      <p className="w-full"><em>
+        This website uses visual elements and design influences inspired by the Party Animals game. I am not affiliated with or endorsed by Party Animals, its developers, or the company behind the game. All trademarks, logos, and images related to Party Animals are the property of their respective owners. Any references to Party Animals are purely for artistic or descriptive purposes and do not imply any association, sponsorship, or approval by the game’s creators.        If you are the owner of any content used on this website and would like it removed, please contact me, and I will promptly address your request.
+      </em></p>
     </div>
   )
 }
