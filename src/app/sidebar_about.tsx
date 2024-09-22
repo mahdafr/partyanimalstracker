@@ -21,7 +21,7 @@ export const Sidebar = () => {
     return (
         <Sheet>
             <SheetTrigger asChild>
-            <Button variant="secondary" size="icon">
+            <Button variant="ghost" size="icon">
                 <Menu className="h-7 w-7"/>
             </Button>
             </SheetTrigger>
