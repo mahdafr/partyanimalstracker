@@ -33,76 +33,75 @@ export default async function Page() {
 
   return (
     <div className="space-x-2 px-5 py-5">
-      <div className="navigation">
-        <ThemeButton/>
-        <Sidebar/>
-      </div>
-
-      {/* title and description */}
-      <Card className={cn("w-full")}>
+      <Card className="justify-center">
         <CardHeader>
           <CardTitle><div className={concertone.className}>
-          <h1 className="text-5xl">PARTY ANIMALS TRACKER</h1></div></CardTitle>
+            {/* theme and info buttons */}
+            <div className="navigation">
+              {/* <ThemeButton/> */}
+              <Sidebar/>
+            </div>
+            
+            {/* title and description */}
+            <h1 className="text-5xl">PARTY ANIMALS TRACKER</h1></div>
+          </CardTitle>
         </CardHeader>
-        <CardDescription>
-        <p className="text-xl text-muted-foreground">
-          An online tool to track your progress towards Daily and Weekly Missions in Party Animals.
-        </p>
+        <CardDescription className="w-full justify-between space-x-2 py-2">
+          <p className="text-xl text-muted-foreground">
+            An online tool to track your progress towards Daily and Weekly Missions in Party Animals.
+          </p>
         </CardDescription>
         <CardContent>
-        <Tabs defaultValue="daily">
-        <TabsList className="grid w-full grid-cols-2 bg:white">
-          <TabsTrigger value="daily" >
-            <div className={jua.className}><b>DAILY</b></div>
-          </TabsTrigger>
-          <TabsTrigger value="weekly">
-            <div className={jua.className}><b>WEEKLY</b></div>
-          </TabsTrigger>
-        </TabsList>
+          
+          <Tabs defaultValue="daily">
+            <TabsList className="grid w-full grid-cols-2">
+              <TabsTrigger value="daily" >
+                <div className={jua.className}><b>DAILY</b></div>
+              </TabsTrigger>
+              <TabsTrigger value="weekly">
+                <div className={jua.className}><b>WEEKLY</b></div>
+              </TabsTrigger>
+            </TabsList>
 
-        {/* dailies */}
-        <TabsContent value="daily">
-          <Card>
-            <CardHeader>
-              <CardTitle><div className={jua.className}>Daily Missions</div></CardTitle>
-            </CardHeader>
-            <CardDescription>
-              Track your daily Party Animals missions here.
-            </CardDescription>
-            <CardContent className="space-y-">
-              <AccordionM title="Woof Faction Missions" data={woof_dailies} />
-              <AccordionM title="Meow Faction Missions" data={meow_dailies} />
-            </CardContent>
-          </Card>
-        </TabsContent>
-        
-        {/* weeklies */}
-        <TabsContent value="weekly">
-          <Card>
-            <CardHeader>
-              <CardTitle><div className={jua.className}>Weekly Missions</div></CardTitle>
-            </CardHeader>
-            <CardDescription>
-              Track your weekly Party Animals missions here.
-            </CardDescription>
-            <CardContent className="space-y-2">
-              {/* non-event weekly missions */}
-              <AccordionM title="Weekly Missions" data={weeklies} />
-              {/* event weekly missions */}
-              <AccordionM title="Woof Faction Missions" data={woof_weeklies} />
-              <AccordionM title="Meow Faction Missions" data={meow_weeklies} />
-            </CardContent>
-          </Card>
-        </TabsContent>
-      </Tabs>
+            {/* dailies */}
+            <TabsContent value="daily">
+              <Card style={{backgroundColor:"hsl(44.65 75.44% 94%)"}}>
+                <CardHeader>
+                  <CardTitle><div className={jua.className}>Daily Missions</div></CardTitle>
+                </CardHeader>
+                <CardDescription>
+                  Track your daily Party Animals missions here.
+                </CardDescription>
+                <CardContent className="space-y-2">
+                  <AccordionM title="Woof Faction Missions" data={woof_dailies} />
+                  <AccordionM title="Meow Faction Missions" data={meow_dailies} />
+                </CardContent>
+              </Card>
+            </TabsContent>
+            
+            {/* weeklies */}
+            <TabsContent value="weekly">
+              <Card style={{backgroundColor:"hsl(44.65 75.44% 94%)"}}>
+                <CardHeader>
+                  <CardTitle><div className={jua.className}>Weekly Missions</div></CardTitle>
+                </CardHeader>
+                <CardDescription>
+                  Track your weekly Party Animals missions here.
+                </CardDescription>
+                <CardContent className="space-y-2">
+                  {/* non-event weekly missions */}
+                  <AccordionM title="Weekly Missions" data={weeklies} />
+                  {/* event weekly missions */}
+                  <AccordionM title="Woof Faction Missions" data={woof_weeklies} />
+                  <AccordionM title="Meow Faction Missions" data={meow_weeklies} />
+                </CardContent>
+              </Card>
+            </TabsContent>
+          </Tabs>
         </CardContent>
       </Card>
-      <div className="row-gap: 200px"></div>
-
-      {/* the Dailies and Weeklies tabs */}
-      
     
-      <Separator className="my-4" />
+      <Separator className="my-3" />
       <p className="w-full"><em>
         This website uses visual elements and design influences inspired by the Party Animals game. I am not affiliated with or endorsed by Party Animals, its developers, or the company behind the game. All trademarks, logos, and images related to Party Animals are the property of their respective owners. Any references to Party Animals are purely for artistic or descriptive purposes and do not imply any association, sponsorship, or approval by the game’s creators.        If you are the owner of any content used on this website and would like it removed, please contact me, and I will promptly address your request.
       </em></p>
