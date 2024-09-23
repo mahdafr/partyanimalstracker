@@ -19,7 +19,7 @@ export function AccordionM<TValue, TData>({title, data}: AccordionMProps<TValue,
             <AccordionItem value="item-1">
                 <AccordionTrigger>{title}</AccordionTrigger>
                 <AccordionContent>
-                <div className="container mx-auto py-10">
+                <div className="container py-10">
                     <DataTable columns={Columns} data={data} />
                 </div>
                 </AccordionContent>

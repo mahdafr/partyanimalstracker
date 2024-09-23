@@ -5,6 +5,7 @@ import { AccordionM } from "./accordion"
 import { concertone, jua } from "./fonts"
 import { promises as fs } from 'fs';
 
+import { cn } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
 import {
   Tabs,
@@ -33,25 +34,25 @@ export default async function Page() {
   return (
     <div className="space-x-2 px-5 py-5">
       <div className="navigation">
-        <Sidebar/>
         <ThemeButton/>
+        <Sidebar/>
       </div>
 
       {/* title and description */}
-      <div className="space-y-5">
-        <div className={concertone.className}>
-          <h1 className="text-5xl">PARTY ANIMALS TRACKER</h1>
-        </div>
+      <Card className={cn("w-full")}>
+        <CardHeader>
+          <CardTitle><div className={concertone.className}>
+          <h1 className="text-5xl">PARTY ANIMALS TRACKER</h1></div></CardTitle>
+        </CardHeader>
+        <CardDescription>
         <p className="text-xl text-muted-foreground">
-            An online tool to track your progress towards Daily and Weekly Missions in Party Animals.
+          An online tool to track your progress towards Daily and Weekly Missions in Party Animals.
         </p>
-        <div className="row-gap: 200px"></div>
-      </div>
-
-      {/* the Dailies and Weeklies tabs */}
-      <Tabs defaultValue="daily">
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="daily">
+        </CardDescription>
+        <CardContent>
+        <Tabs defaultValue="daily">
+        <TabsList className="grid w-full grid-cols-2 bg:white">
+          <TabsTrigger value="daily" >
             <div className={jua.className}><b>DAILY</b></div>
           </TabsTrigger>
           <TabsTrigger value="weekly">
@@ -94,6 +95,12 @@ export default async function Page() {
           </Card>
         </TabsContent>
       </Tabs>
+        </CardContent>
+      </Card>
+      <div className="row-gap: 200px"></div>
+
+      {/* the Dailies and Weeklies tabs */}
+      
     
       <Separator className="my-4" />
       <p className="w-full"><em>

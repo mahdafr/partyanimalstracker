@@ -10,7 +10,6 @@ export const ThemeButton = () => {
   const [isActive, setIsActive] = useState(false);
   const { theme, setTheme } = useTheme();
   
-
   useEffect( () => {
     setMounted(true)
   }, [])
