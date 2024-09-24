@@ -5,7 +5,6 @@ import { AccordionM } from "./accordion"
 import { concertone, jua } from "./fonts"
 import { promises as fs } from 'fs';
 
-import { cn } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
 import {
   Tabs,
@@ -35,24 +34,25 @@ export default async function Page() {
     <div className="space-x-2 px-5 py-5">
       <Card className="justify-center">
         <CardHeader>
-          <CardTitle><div className={concertone.className}>
-            {/* theme and info buttons */}
-            <div className="navigation">
-              {/* <ThemeButton/> */}
-              <Sidebar/>
+          <CardTitle>
+            <div className={concertone.className}>
+              {/* info button */}
+              <div className="navigation">
+                {/* theme button */}
+                <ThemeButton/>
+                <Sidebar/>
+              </div>
+              {/* title and description */}
+              <h1 className="text-5xl">PARTY ANIMALS TRACKER</h1>
             </div>
-            
-            {/* title and description */}
-            <h1 className="text-5xl">PARTY ANIMALS TRACKER</h1></div>
           </CardTitle>
         </CardHeader>
         <CardDescription className="w-full justify-between space-x-2 py-2">
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl">
             An online tool to track your progress towards Daily and Weekly Missions in Party Animals.
           </p>
         </CardDescription>
         <CardContent>
-          
           <Tabs defaultValue="daily">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="daily" >
@@ -65,7 +65,7 @@ export default async function Page() {
 
             {/* dailies */}
             <TabsContent value="daily">
-              <Card style={{backgroundColor:"hsl(44.65 75.44% 94%)"}}>
+              <Card style={{backgroundColor:"hsl(var(--background))"}}>
                 <CardHeader>
                   <CardTitle><div className={jua.className}>Daily Missions</div></CardTitle>
                 </CardHeader>
@@ -81,7 +81,7 @@ export default async function Page() {
             
             {/* weeklies */}
             <TabsContent value="weekly">
-              <Card style={{backgroundColor:"hsl(44.65 75.44% 94%)"}}>
+            <Card style={{backgroundColor:"hsl(var(--background))"}}>
                 <CardHeader>
                   <CardTitle><div className={jua.className}>Weekly Missions</div></CardTitle>
                 </CardHeader>
@@ -102,7 +102,7 @@ export default async function Page() {
       </Card>
     
       <Separator className="my-3" />
-      <p className="w-full"><em>
+      <p className="w-full" style={{color:"--muted-foreground"}}><em>
         This website uses visual elements and design influences inspired by the Party Animals game. I am not affiliated with or endorsed by Party Animals, its developers, or the company behind the game. All trademarks, logos, and images related to Party Animals are the property of their respective owners. Any references to Party Animals are purely for artistic or descriptive purposes and do not imply any association, sponsorship, or approval by the game’s creators.        If you are the owner of any content used on this website and would like it removed, please contact me, and I will promptly address your request.
       </em></p>
     </div>

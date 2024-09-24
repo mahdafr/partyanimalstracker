@@ -15,7 +15,7 @@
     --secondary: 44.65 75.44% 88.82%;
     --secondary-foreground: 270 2.22% 35.29%;
     --muted: 30.34 84.76% 58.82%;
-    --muted-foreground: 270 2.22% 35.29%;
+    --muted-foreground: 270 2.22% 38%;
     --accent: 44.65 75.44% 88.82%;
     --accent-foreground: 84.39 56.16% 42.94%;
     --destructive: 0 84.2% 60.2%;
@@ -30,43 +30,35 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
   }
-
-  .dark {
-    --background: 43.13 85.71% 78.04%;
-    --foreground: 25.52 70.73% 51.76%;
-    --card: 44.65 75.44% 100%;
-    --card-foreground: 25.52 70.73% 51.76%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 0 62.8% 30.6%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
 }
 
-[data-theme="light"] body {
-  background-color: #000;
-  color: #fff;
-}
 
-[data-theme="dark"] body {
-  background-color: #000;
-  color: #fff;
+[data-theme="dark"] {
+  --background: 265 12% 20%;
+  --foreground: 43.13 85.71% 80%;
+  --card: 243.13 10% 10%;
+  --card-foreground: 43.13 85.71% 75%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 30.34 84.76% 35%;
+  --primary-foreground: 43.13 85.71% 8%;
+  --secondary: 270 2.22% 45%;
+  --secondary-foreground: 44.65 75.44% 88.82%;
+  --muted: 30 30% 12.5%;
+  --muted-foreground: 30.34 84.76% 58.82%;
+  --accent: 270 2.22% 30%;
+  --accent-foreground: 84.39 56.16% 49%;
+  --destructive: 210 40% 98%;
+  --destructive-foreground: 0 84.2% 60.2%;
+  --border: 270 2.22% 5%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 0.5rem;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
 }
 
 @layer base {

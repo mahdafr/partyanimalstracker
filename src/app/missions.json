@@ -10,14 +10,14 @@
         {"required":3, "prompt": "Use 3 different Team Woof members to play games", "reward": "4000 XP"}
     ],
     "meow_daily" : [
-        {"required":0, "prompt": "TBD", "reward": "TBD"},
-        {"required":0, "prompt": "TBD", "reward": "TBD"},
-        {"required":0, "prompt": "TBD", "reward": "TBD"}
+        {"required":1, "prompt": "Use a Team Meow member in 1 game", "reward": "700 XP"},
+        {"required":1, "prompt": "Use a Team Meow member in 1 round in Last Stand", "reward": "800 XP"},
+        {"required":2, "prompt": "Use a Team Meow member and select 2 Pawers in SMASH game in total", "reward": "900 XP"}
     ],
     "meow_weekly" : [
-        {"required":0, "prompt": "TBD", "reward": "TBD"},
-        {"required":0, "prompt": "TBD", "reward": "TBD"},
-        {"required":0, "prompt": "TBD", "reward": "TBD"}
+        {"required":1, "prompt": "Use a Team Meow member and select Pawer 1 time in SMASH game", "reward": "1800 XP"},
+        {"required":5, "prompt": "Use a Team Meow member and knock out 5 opponents with melee weapons in total", "reward": "2600 XP"},
+        {"required":4, "prompt": "Use a Team Meow member in 4 games", "reward": "2800 XP"}
     ],
     "weeklies" : [
         {"required":15, "prompt": "Knock out 15 opponents with Punch in total", "reward": "1000 XP"},
