@@ -2,16 +2,19 @@
 
 import React, { useState } from "react";
 import { ColumnDef } from "@tanstack/react-table"
+import { Slider } from "@/components/ui/slider"
 import { Mission } from "./mission"
 import { update, getProgress } from "./cookies"
-import { Slider } from "@/components/ui/slider"
+import { jua } from "./fonts";
 
 // format the table's columns
 export const Columns: ColumnDef<Mission>[] = [
   {
     accessorKey: "progress",
     header: () => 
-      <div className="text-center">Progress</div>,
+      <div className="text-center"><div className={jua.className}>
+        <h6>Progress</h6>
+      </div></div>,
     cell: ({ row }) => {
       const mission = row.original
       const cachedValue = getProgress(mission.id);
@@ -32,14 +35,18 @@ export const Columns: ColumnDef<Mission>[] = [
   },
   {
     accessorKey: "prompt",
-    header: () => <div className="text-left">Description</div>,
+    header: () => <div className="text-left"><div className={jua.className}>
+      <h6>Description</h6>
+      </div></div>,
     cell: ({row}) => {
       return <div className="text-left font-small">{row.getValue("prompt")}</div>
     }
   },
   {
     accessorKey: "reward",
-    header: () => <div className="text-center">Reward</div>,
+    header: () => <div className="text-center"><div className={jua.className}>
+      <h6>Reward</h6>
+    </div></div>,
     cell: ({row}) => {
       return <div className="text-center font-small">{row.getValue("reward")}</div>
     }

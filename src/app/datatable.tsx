@@ -6,7 +6,6 @@ import {
   getCoreRowModel,
   useReactTable,
 } from "@tanstack/react-table"
-
 import {
   Table,
   TableBody,
@@ -34,7 +33,7 @@ export function DataTable<TData, TValue>({
   return (
     <div className="rounded-md border w-full" style={{padding: 0}}>
       <Table>
-        <TableHeader>
+        <TableHeader style={{backgroundColor:"hsl(var(--muted-table-header))", border:"rounded-md"}} className="rounded-md" >
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => {

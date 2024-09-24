@@ -48,9 +48,9 @@ export default async function Page() {
           </CardTitle>
         </CardHeader>
         <CardDescription className="w-full justify-between space-x-2 py-2">
-          <p className="text-xl">
-            An online tool to track your progress towards Daily and Weekly Missions in Party Animals.
-          </p>
+          <h4 className="text-xl">
+            An online tool to track your progress towards daily and weekly missions in Party Animals.
+          </h4>
         </CardDescription>
         <CardContent>
           <Tabs defaultValue="daily">
@@ -70,7 +70,7 @@ export default async function Page() {
                   <CardTitle><div className={jua.className}>Daily Missions</div></CardTitle>
                 </CardHeader>
                 <CardDescription>
-                  Track your daily Party Animals missions here.
+                  <h5>Track your daily missions here.</h5>
                 </CardDescription>
                 <CardContent className="space-y-2">
                   <AccordionM title="Woof Faction Missions" data={woof_dailies} />
@@ -86,7 +86,7 @@ export default async function Page() {
                   <CardTitle><div className={jua.className}>Weekly Missions</div></CardTitle>
                 </CardHeader>
                 <CardDescription>
-                  Track your weekly Party Animals missions here.
+                  <h5>Track your weekly missions here.</h5>
                 </CardDescription>
                 <CardContent className="space-y-2">
                   {/* non-event weekly missions */}

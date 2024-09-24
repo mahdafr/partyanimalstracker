@@ -27,32 +27,36 @@ export const Sidebar = () => {
             </SheetTrigger>
             <SheetContent className="w-[400px] sm:w-[540px]" side="right">
                 <SheetHeader>
-                <SheetTitle className={concertone.className}>
-                    <h1 className="text-2xl">About</h1>
-                </SheetTitle>
-                <Alert>
-                    <AlertTitle className={playpen.className}><b>Thanks for your patience!</b></AlertTitle>
-                    <AlertDescription>
-                        This application is a work in progress and updates are rolled out regularly.
-                    </AlertDescription>
-                </Alert>
-                <SheetDescription className="w-full justify-between space-x-2 py-2">
-                    <div className={playpen.className}>
-                        Thanks for using my first project building a web application in NextJS!
-                    </div>
-                    <div className="center space-x-2 py-4">
-                        I'd love to give a shoutout to the developer for the <a href="https://www.paliatracker.com" >Palia Tracker</a> project that has inpired me with its beautiful interface and awesome libraries.
-                    </div>
-                    <a href="https://www.linkedin.com/in/mahdafr">
-                        <Button variant="ghost"><Linkedin/></Button></a>
-                    <a href="https://www.instagram.com/mahdafr13/">
-                        <Button variant="ghost"><Instagram/></Button></a>
-                    <a href="http://mahdafr.com/">
-                        <Button variant="ghost"><Globe/></Button></a>
-                </SheetDescription>
+                    <SheetTitle className={concertone.className}>
+                        <h1 className="text-2xl">About</h1>
+                    </SheetTitle>
+                    <Alert>
+                        <AlertTitle className={playpen.className}><b>Thanks for your patience!</b></AlertTitle>
+                        <AlertDescription>
+                            This application is a work in progress and updates are rolled out regularly.
+                        </AlertDescription>
+                    </Alert>
+                    <SheetDescription className="w-full justify-between space-x-2 py-2">
+                        <div className={playpen.className}>
+                            <p className="w-full" style={{color:"hsl(var(--foreground))"}}>
+                                Thanks for using my first project building a web application in NextJS!
+                            </p>
+                        </div>
+                        <div className="center space-x-2 py-4">
+                            <p className="w-full" style={{color:"hsl(var(--foreground))"}}>
+                                I'd love to give a shoutout to the developer for the <a href="https://www.paliatracker.com" >Palia Tracker</a> project that has inpired me with its beautiful interface and awesome libraries.
+                            </p>
+                        </div>
+                        <a href="https://www.linkedin.com/in/mahdafr">
+                            <Button variant="ghost"><Linkedin/></Button></a>
+                        <a href="https://www.instagram.com/mahdafr13/">
+                            <Button variant="ghost"><Instagram/></Button></a>
+                        <a href="http://mahdafr.com/">
+                            <Button variant="ghost"><Globe/></Button></a>
+                    </SheetDescription>
                 </SheetHeader>
                 <SheetFooter>
-                <SheetClose/>
+                    <SheetClose/>
                 </SheetFooter>
             </SheetContent>
         </Sheet>

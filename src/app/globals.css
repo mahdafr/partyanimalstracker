@@ -7,7 +7,7 @@
     --background: 44.65 75.44% 94%;
     --foreground: 30 1.14% 34.51%; 
     --card: 43.13 85.71% 85%;
-    --card-foreground: 30 1.14% 34.51%;
+    --card-foreground: 30 1.14% 30%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 222.2 84% 4.9%;
     --primary: 30.34 84.76% 58.82%;
@@ -16,6 +16,8 @@
     --secondary-foreground: 270 2.22% 35.29%;
     --muted: 30.34 84.76% 58.82%;
     --muted-foreground: 270 2.22% 38%;
+    --muted-table-header: 43.13 85.71% 85%;
+    --muted-foreground-table-header: 43 50% 20%;
     --accent: 44.65 75.44% 88.82%;
     --accent-foreground: 84.39 56.16% 42.94%;
     --destructive: 0 84.2% 60.2%;
@@ -35,19 +37,20 @@
 
 [data-theme="dark"] {
   --background: 265 12% 20%;
-  --foreground: 43.13 85.71% 80%;
-  --card: 243.13 10% 10%;
-  --card-foreground: 43.13 85.71% 75%;
+  --foreground: 43.13 45% 70%;
+  --card: 243.13 15% 11%;
+  --card-foreground: 43.13 45% 70%;
   --popover: 222.2 84% 4.9%;
   --popover-foreground: 222.2 84% 4.9%;
   --primary: 30.34 84.76% 35%;
   --primary-foreground: 43.13 85.71% 8%;
   --secondary: 270 2.22% 45%;
   --secondary-foreground: 44.65 75.44% 88.82%;
-  --muted: 30 30% 12.5%;
-  --muted-foreground: 30.34 84.76% 58.82%;
-  --accent: 270 2.22% 30%;
-  --accent-foreground: 84.39 56.16% 49%;
+  --muted: 30 25% 12.5%;
+  --muted-table-header: 243.13 15% 11%;
+  --muted-foreground-table-header: 43 50% 60%;
+  --accent: 270 2.22% 20%;
+  --accent-foreground: 84.39 60% 40%;
   --destructive: 210 40% 98%;
   --destructive-foreground: 0 84.2% 60.2%;
   --border: 270 2.22% 5%;
@@ -86,7 +89,6 @@ p {
   width:50%;
   text-align: center;
   font-size: small;
-  color: hsl(30 1.14% 45%);
 }
 
 h1 {
@@ -98,13 +100,19 @@ h1 {
 
 h4 {
   margin:auto;
-  /* color: hsl(30 1.14% 34.51%); */
   font-weight: bold;
+  color: hsl(var(--foreground));
 }
 
 h5 {
   margin:auto;
-  /* color: hsl(30 1.14% 34.51%); */
+  align-content: left;
+  color: hsl(var(--foreground));
+}
+
+h6 {
+  margin:auto;
+  color: hsl(var(--muted-foreground-table-header));
 }
 
 a:link {
