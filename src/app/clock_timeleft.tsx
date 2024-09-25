@@ -22,7 +22,7 @@ export function ClockCountdown<TValue>({daysLeft} : ClockCountdownProps<TValue>)
   }, []);
 
   var nowUTC = new Date().getTime()
-  const nowET = new Date(nowUTC - (4 * 60 * 60 * 1000)); // ET is 4 hours behind of UTC
+  const nowET = new Date(nowUTC - (4 * 60 * 1000)); // ET is 4 hours behind of UTC
   var days = (7 - nowET.getDay()) % 7
   var hrs = 23 - nowET.getHours()
   var mins = 59 - nowET.getMinutes()
