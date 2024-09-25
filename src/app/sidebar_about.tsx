@@ -49,8 +49,8 @@ export const Sidebar = () => {
                         </div>
                         <a href="https://www.linkedin.com/in/mahdafr">
                             <Button variant="ghost"><Linkedin/></Button></a>
-                        <a href="https://www.instagram.com/mahdafr13/">
-                            <Button variant="ghost"><Instagram/></Button></a>
+                        {/* <a href="https://www.instagram.com/mahdafr13/">
+                            <Button variant="ghost"><Instagram/></Button></a> */}
                         <a href="http://mahdafr.com/">
                             <Button variant="ghost"><Globe/></Button></a>
                     </SheetDescription>
