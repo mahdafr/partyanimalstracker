@@ -21,15 +21,17 @@ export const Columns: ColumnDef<Mission>[] = [
       const [val, setVal] = useState(cachedValue);
       return (
         <div>
-          <Slider
-            defaultValue={[cachedValue]}
-            max={parseInt(mission.required.toString())}
-            step={1}
-            onValueChange = {(i) => setVal(i[0])}
-            onValueCommit = {(i) => update(mission, i[0])}
-          />
-          <p>{val}</p>
-        </div>
+          <div className="navigation">
+            <p className="text-xs"  style={{color:"hsl(var(--primary-progress))"}}>0</p>
+            <Slider
+              defaultValue={[cachedValue]}
+              max={parseInt(mission.required.toString())}
+              step={1}
+              onValueChange = {(i) => setVal(i[0])}
+              onValueCommit = {(i) => update(mission, i[0])}
+            />
+            <p className="text-xs" style={{color:"hsl(var(--primary-progress))"}}>{mission.required}</p>
+          </div><p className="text-base">{val}</p></div>
       )
     }
   },

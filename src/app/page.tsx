@@ -2,6 +2,7 @@ import { getMissions } from "./mission"
 import { ThemeButton } from "./button_theme"
 import { Sidebar } from "./sidebar_about"
 import { AccordionM } from "./accordion"
+import { ClockCountdown } from "./clock_timeleft"
 import { concertone, jua } from "./fonts"
 import { promises as fs } from 'fs';
 
@@ -19,6 +20,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Label } from "@/components/ui/label"
 
 
 export default async function Page() {
@@ -67,7 +69,10 @@ export default async function Page() {
             <TabsContent value="daily">
               <Card style={{backgroundColor:"hsl(var(--background))"}}>
                 <CardHeader>
-                  <CardTitle><div className={jua.className}>Daily Missions</div></CardTitle>
+                  <div className="navigation">
+                    <CardTitle><div className={jua.className}>Daily Missions</div></CardTitle>
+                    <ClockCountdown daysLeft={false}/>
+                  </div>
                 </CardHeader>
                 <CardDescription>
                   <h5>Track your daily missions here.</h5>
@@ -83,7 +88,10 @@ export default async function Page() {
             <TabsContent value="weekly">
             <Card style={{backgroundColor:"hsl(var(--background))"}}>
                 <CardHeader>
-                  <CardTitle><div className={jua.className}>Weekly Missions</div></CardTitle>
+                  <div className="navigation">
+                    <CardTitle><div className={jua.className}>Weekly Missions</div></CardTitle>
+                    <ClockCountdown daysLeft={true}/>
+                  </div>
                 </CardHeader>
                 <CardDescription>
                   <h5>Track your weekly missions here.</h5>

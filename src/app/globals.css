@@ -12,7 +12,8 @@
     --popover-foreground: 222.2 84% 4.9%;
     --primary: 30.34 84.76% 58.82%;
     --primary-foreground: 43.13 85.71% 78.04%;
-    --secondary: 44.65 75.44% 88.82%;
+    --primary-progress: 44.65 50% 35%;
+    --secondary: 44.65 50% 75%;
     --secondary-foreground: 270 2.22% 35.29%;
     --muted: 30.34 84.76% 58.82%;
     --muted-foreground: 270 2.22% 38%;
@@ -34,7 +35,6 @@
   }
 }
 
-
 [data-theme="dark"] {
   --background: 265 6.5% 20%;
   --foreground: 43.13 45% 70%;
@@ -44,6 +44,7 @@
   --popover-foreground: 222.2 84% 4.9%;
   --primary: 30.34 84.76% 35%;
   --primary-foreground: 43.13 85.71% 8%;
+  --primary-progress: 270 2.22% 60%;
   --secondary: 270 2.22% 45%;
   --secondary-foreground: 44.65 75.44% 88.82%;
   --muted: 30 25% 12.5%;

@@ -1,4 +1,4 @@
-import { getId } from './id'
+import { getId, getNextSunday } from './mission_data'
 
 // the Mission object
 export type Mission = {
@@ -40,11 +40,4 @@ export function getMissions(data_json: Array<JSONMission>, count: number, event:
         mission_list.push(mission)
     }
     return mission_list;
-}
-
-// finds the next Sunday (not including today, if Sunday)
-function getNextSunday() : Date {
-    var d = new Date();
-    d.setDate(d.getDate() + (((7 - d.getDay()) % 7) || 7));
-    return d;
 }

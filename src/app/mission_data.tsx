@@ -17,3 +17,10 @@ export function getId(date: string, event: boolean, daily: boolean, group: strin
             group + SEP +
             i.toString();
 }
+
+// finds the next Sunday (not including today, if Sunday)
+export function getNextSunday() : Date {
+    var d = new Date();
+    d.setDate(d.getDate() + (7 - d.getDay()) % 7);
+    return d;
+}
