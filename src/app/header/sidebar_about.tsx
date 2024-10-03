@@ -1,5 +1,5 @@
-import { concertone, playpen } from "./fonts"
-import { BadgeInfo, Linkedin, Instagram, Globe } from "lucide-react"
+import { concertone, playpen } from "../fonts"
+import { BadgeInfo, Linkedin, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Alert,
@@ -25,7 +25,7 @@ export const Sidebar = () => {
                 <BadgeInfo className="h-7 w-7"/>
             </Button>
             </SheetTrigger>
-            <SheetContent className="w-[400px] sm:w-[540px]" side="right">
+            <SheetContent className="w-[300px] sm:w-[540px]" side="right">
                 <SheetHeader>
                     <SheetTitle className={concertone.className}>
                         <h1 className="text-2xl">About</h1>
@@ -49,8 +49,6 @@ export const Sidebar = () => {
                         </div>
                         <a href="https://www.linkedin.com/in/mahdafr">
                             <Button variant="ghost"><Linkedin/></Button></a>
-                        {/* <a href="https://www.instagram.com/mahdafr13/">
-                            <Button variant="ghost"><Instagram/></Button></a> */}
                         <a href="http://mahdafr.com/">
                             <Button variant="ghost"><Globe/></Button></a>
                     </SheetDescription>

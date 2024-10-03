@@ -1,12 +1,12 @@
 import { getMissions } from "./mission"
-import { ThemeButton } from "./button_theme"
-import { Sidebar } from "./sidebar_about"
-import { AccordionM } from "./accordion"
+import { ThemeButton } from "./header/button_theme"
+import { Sidebar } from "./header/sidebar_about"
+import { Footer } from "./footer/footer"
+import { AccordionMGroup } from "./accordion_group"
 import { ClockCountdown } from "./clock_timeleft"
 import { concertone, jua } from "./fonts"
 import { promises as fs } from 'fs';
 
-import { Separator } from "@/components/ui/separator"
 import {
   Tabs,
   TabsContent,
@@ -20,7 +20,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
 
 
 export default async function Page() {
@@ -45,13 +44,14 @@ export default async function Page() {
                 <Sidebar/>
               </div>
               {/* title and description */}
-              <h1 className="text-5xl">PARTY ANIMALS TRACKER</h1>
+              <h1 className="text-4xl" style={{justifyItems: "center", textAlign:"center", justifyContent:"center"}}>PARTY ANIMALS</h1>
+              <h2 className="text-2xl" style={{textAlign:"center", justifyContent:"center"}}>Mission Tracker</h2>
             </div>
           </CardTitle>
         </CardHeader>
         <CardDescription className="w-full justify-between space-x-2 py-2">
-          <h4 className="text-xl">
-            An online tool to track your progress towards daily and weekly missions in Party Animals.
+          <h4 className="text-md" style={{marginLeft:"9px", marginRight:"9px"}}>
+            Your online tool to help track your progress towards daily and weekly missions in Party Animals.
           </h4>
         </CardDescription>
         <CardContent>
@@ -69,17 +69,13 @@ export default async function Page() {
             <TabsContent value="daily">
               <Card style={{backgroundColor:"hsl(var(--background))"}}>
                 <CardHeader>
-                  <div className="navigation">
-                    <CardTitle><div className={jua.className}>Daily Missions</div></CardTitle>
-                    <ClockCountdown daysLeft={false}/>
-                  </div>
+                  <CardTitle></CardTitle>
+                  <ClockCountdown daysLeft={false}/>
                 </CardHeader>
-                <CardDescription>
-                  <h5>Track your daily missions here.</h5>
-                </CardDescription>
+                <CardDescription></CardDescription>
                 <CardContent className="space-y-2">
-                  <AccordionM title="Woof Faction Missions" data={woof_dailies} />
-                  <AccordionM title="Meow Faction Missions" data={meow_dailies} />
+                  <AccordionMGroup title="Woof Faction Missions" data={woof_dailies} />
+                  <AccordionMGroup title="Meow Faction Missions" data={meow_dailies} />
                 </CardContent>
               </Card>
             </TabsContent>
@@ -88,20 +84,16 @@ export default async function Page() {
             <TabsContent value="weekly">
             <Card style={{backgroundColor:"hsl(var(--background))"}}>
                 <CardHeader>
-                  <div className="navigation">
-                    <CardTitle><div className={jua.className}>Weekly Missions</div></CardTitle>
-                    <ClockCountdown daysLeft={true}/>
-                  </div>
+                  <CardTitle></CardTitle>
+                  <ClockCountdown daysLeft={true}/>
                 </CardHeader>
-                <CardDescription>
-                  <h5>Track your weekly missions here.</h5>
-                </CardDescription>
+                <CardDescription></CardDescription>
                 <CardContent className="space-y-2">
                   {/* non-event weekly missions */}
-                  <AccordionM title="Weekly Missions" data={weeklies} />
+                  <AccordionMGroup title="Weekly Missions" data={weeklies} />
                   {/* event weekly missions */}
-                  <AccordionM title="Woof Faction Missions" data={woof_weeklies} />
-                  <AccordionM title="Meow Faction Missions" data={meow_weeklies} />
+                  <AccordionMGroup title="Woof Faction Missions" data={woof_weeklies} />
+                  <AccordionMGroup title="Meow Faction Missions" data={meow_weeklies} />
                 </CardContent>
               </Card>
             </TabsContent>
@@ -109,10 +101,7 @@ export default async function Page() {
         </CardContent>
       </Card>
     
-      <Separator className="my-3" />
-      <p className="w-full" style={{color:"--muted-foreground"}}><em>
-        This website uses visual elements and design influences inspired by the Party Animals game. I am not affiliated with or endorsed by Party Animals, its developers, or the company behind the game. All trademarks, logos, and images related to Party Animals are the property of their respective owners. Any references to Party Animals are purely for artistic or descriptive purposes and do not imply any association, sponsorship, or approval by the game’s creators.        If you are the owner of any content used on this website and would like it removed, please contact me, and I will promptly address your request.
-      </em></p>
+      <Footer></Footer>
     </div>
   )
 }
