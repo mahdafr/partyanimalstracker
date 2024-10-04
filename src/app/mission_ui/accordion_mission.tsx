@@ -1,7 +1,10 @@
 'use client'
 
+import React from "react"
+
 import { LineM } from "./line_missions"
 import { Mission } from "../mission/mission"
+import { BadgeM, Status } from "./badge_mission"
 
 import {
     Accordion,
@@ -24,7 +27,14 @@ export function Missions<TValue>({missions}: MissionsProps<Mission>) {
             {missions.map(mission => (
                 <div key={mission.id}>
                     <AccordionItem value={mission.id} className="accordion-item">
-                        <AccordionTrigger className="accordion-trigger"><div className={jua.className}>{mission.reward}</div></AccordionTrigger>
+                        <AccordionTrigger className="accordion-trigger">
+                            <React.Fragment>
+                                <BadgeM mission={mission}></BadgeM>
+                                <div className={jua.className}>
+                                    {mission.reward}
+                                </div>
+                            </React.Fragment>
+                        </AccordionTrigger>
                         <AccordionContent>
                             <LineM mission={mission}></LineM>
                         </AccordionContent>
