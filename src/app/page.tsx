@@ -1,4 +1,4 @@
-import { getMissions } from "./mission"
+import { getMissions } from "./mission/mission"
 import { ThemeButton } from "./header/button_theme"
 import { Sidebar } from "./header/sidebar_about"
 import { Footer } from "./footer/footer"

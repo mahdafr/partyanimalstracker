@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import { ColumnDef } from "@tanstack/react-table"
 import { Slider } from "@/components/ui/slider"
-import { Mission } from "./mission"
-import { update, getProgress } from "./cookies"
+import { Mission } from "./mission/mission"
+import { update, getProgress } from "./mission/cookies"
 import { jua } from "./fonts";
 
 // format the table's columns

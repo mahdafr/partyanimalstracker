@@ -1,4 +1,4 @@
-import { getId, getNextSunday } from './mission_data'
+import { getId, getNextSunday } from './data'
 
 // the Mission object
 export type Mission = {

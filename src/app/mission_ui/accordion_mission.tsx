@@ -1,7 +1,7 @@
 'use client'
 
 import { LineM } from "./line_missions"
-import { Mission } from "../mission"
+import { Mission } from "../mission/mission"
 
 import {
     Accordion,

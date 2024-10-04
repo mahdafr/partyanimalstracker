@@ -5,7 +5,8 @@ import { useBetween } from "use-between"
 
 import { ProgressM } from "./progress_mission"
 import { SliderM } from "./slider_mission"
-import { Mission } from "../mission"
+import { Mission } from "../mission/mission"
+import { getProgress } from "../mission/cookies"
 
 
 export let sharedProgresses: Record<string, any> = {}
@@ -17,14 +18,14 @@ interface LineMProps<Mission> {
 
 export function LineM<TValue>({mission}: LineMProps<Mission>) {
     const useShareableState = () => {
-        const [progress, setProgress] = useState(0);
+        const [progress, setProgress] = useState(getProgress(mission.id));
         return {
             progress, setProgress
         }
     }
     const useSharedProgress = () => useBetween(useShareableState);
     sharedProgresses[mission.id] = useSharedProgress; 
-    
+
     return (
         <div className="mission-item">
             <div className="mission-item-row-left">

@@ -1,30 +1,22 @@
 "use client"
 
-import { useState } from "react";
-
 import { Slider } from "@/components/ui/slider"
-import { Mission } from "./../mission"
+import { Mission } from "../mission/mission"
 import { sharedProgresses } from "./line_missions";
-import { handleIncrement } from "./progress_mission";
-import { update, getProgress } from "./../cookies"
-import { jua } from "./../fonts";
+import { update } from "../mission/cookies"
+import { jua } from "../fonts";
 
-import { useBetween } from "use-between";
 
 interface SliderMProps {
     mission: Mission,
 }
 
 export function SliderM({mission}: SliderMProps) {
-    const cachedValue = getProgress(mission.id);
-    const [val, setVal] = useState(cachedValue);
     const {progress, setProgress} = sharedProgresses[mission.id]();
-    // setProgress(cachedValue)
     
     const handleChange = (mission: Mission, prog: number) => {
         setProgress(prog);
-        // update(mission, prog)
-        // handleIncrement(progress, mission.required)
+        update(mission, prog);
     }
 
     return (
@@ -34,17 +26,17 @@ export function SliderM({mission}: SliderMProps) {
                     0
                 </p>
                 <Slider
-                    defaultValue={[cachedValue]}
+                    defaultValue={[progress]}
                     max={mission.required}
                     step={mission.required > 50 ? 50 : 1}
-                    onValueChange = {(i) => setVal(i[0])}
+                    onValueChange = {(i) => setProgress(i[0])}
                     onValueCommit = {(i) => handleChange(mission, i[0])}
                 />
                 <p className={jua.className} style={{color:"hsl(var(--primary-progress))", fontSize:"small"}}>
                     {mission.required}
                 </p>
             </div>
-        <p className={jua.className} style={{fontSize:"large"}}>{val}</p>
+        <p className={jua.className} style={{fontSize:"large"}}>{progress}</p>
     </div>
     )
 }

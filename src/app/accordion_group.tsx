@@ -2,7 +2,7 @@ import { Columns } from "./columns"
 import { DataTable } from "./datatable"
 import { jua } from "./fonts"
 
-import { Missions } from "./mission/missions"
+import { Missions } from "./mission_ui/accordion_mission"
 
 import {
     Accordion,
