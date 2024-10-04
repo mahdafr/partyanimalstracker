@@ -1,7 +1,7 @@
 'use client'
 
 import { LineM } from "./line_missions"
-import { Separator } from "@/components/ui/separator"
+import { Mission } from "../mission"
 
 import {
     Accordion,
@@ -20,36 +20,17 @@ export function Missions<TValue>({missions}: MissionsProps<Mission>) {
     return (
         <Accordion type="multiple" className="w-full"
                         style={{strokeWidth:"2px"}}
-                        defaultValue={["item-1", "item-2", "item-3", missions.length == 4 ? "item-4" : ""]}>
-            <AccordionItem value="item-1" className="accordion-item">
-                <AccordionTrigger className="accordion-trigger">{missions[0].reward}</AccordionTrigger>
-                <AccordionContent>
-                    <LineM mission={missions[0]}></LineM>
-                </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-2" className="accordion-item">
-                <AccordionTrigger className="accordion-trigger">{missions[1].reward}</AccordionTrigger>
-                <AccordionContent>
-                    <LineM mission={missions[1]}></LineM>
-                </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-3" className="accordion-item">
-                <AccordionTrigger className="accordion-trigger">{missions[2].reward}</AccordionTrigger>
-                <AccordionContent>
-                    <LineM mission={missions[2]}></LineM>
-                </AccordionContent>
-            </AccordionItem>
-            
-            {missions.length == 4 ?
-                <AccordionItem value="item-4" className="accordion-item">
-                    <AccordionTrigger className="accordion-trigger">{missions[3].reward}</AccordionTrigger>
-                    <AccordionContent>
-                        <LineM mission={missions[3]}></LineM>
-                    </AccordionContent>
-                </AccordionItem>
-            : ""}
+                        defaultValue={missions.map(m => m.id)}>
+            {missions.map(mission => (
+                <div key={mission.id}>
+                    <AccordionItem value={mission.id} className="accordion-item">
+                        <AccordionTrigger className="accordion-trigger"><div className={jua.className}>{mission.reward}</div></AccordionTrigger>
+                        <AccordionContent>
+                            <LineM mission={mission}></LineM>
+                        </AccordionContent>
+                    </AccordionItem>
+                </div>
+            ))}
         </Accordion>
     )
 }

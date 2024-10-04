@@ -5,6 +5,7 @@ import * as React from "react"
 import { Label } from "@/components/ui/label"
 import { Badge } from "@/components/ui/badge"
 import { Clock } from "lucide-react"
+import { jua } from "./fonts"
 
 
 interface ClockCountdownProps<TValue> {
@@ -33,16 +34,16 @@ export function ClockCountdown<TValue>({daysLeft} : ClockCountdownProps<TValue>)
   var secs = 59 - now.getUTCSeconds()
   return (
     <div style={{textAlign:"center", display:"inline-flex", marginLeft:"auto", marginRight:"auto"}}>
-        <Clock style={{color:"hsl(var(--secondary-foreground))", marginInline:"5px", marginTop:"4%"}}></Clock>
+        <Clock style={{color:"hsl(var(--secondary-foreground))", marginInline:"6px"}}></Clock>
         <Badge style={{backgroundColor:"hsl(var(--primary-foreground))"}}>
-            {daysLeft ? <Label className="clock_text_num">{days.toString()}</Label> : ""}
+            {daysLeft ? <Label className="clock_text_num"><div className={jua.className}>{days.toString()}</div></Label> : ""}
             {daysLeft ? <Label className="clock_text_char">d</Label> : ""}
             
-            <Label className="clock_text_num">{hrs.toString()}</Label>
+            <Label className="clock_text_num"><div className={jua.className}>{hrs.toString()}</div></Label>
             <Label className="clock_text_char">h</Label>
-            <Label className="clock_text_num">{mins.toString()}</Label>
+            <Label className="clock_text_num"><div className={jua.className}>{mins.toString()}</div></Label>
             <Label className="clock_text_char">m</Label>
-            <Label className="clock_text_num">{secs.toString()}</Label>
+            <Label className="clock_text_num"><div className={jua.className}>{secs.toString()}</div></Label>
             <Label className="clock_text_char" style={{marginInlineEnd:"0px"}}>s</Label>
         </Badge>
     </div>

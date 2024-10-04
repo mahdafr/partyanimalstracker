@@ -4,10 +4,11 @@ import { useState } from "react";
 
 import { Slider } from "@/components/ui/slider"
 import { Mission } from "./../mission"
-import { useShareableState } from "./line_missions";
+import { sharedProgresses } from "./line_missions";
 import { handleIncrement } from "./progress_mission";
 import { update, getProgress } from "./../cookies"
 import { jua } from "./../fonts";
+
 import { useBetween } from "use-between";
 
 interface SliderMProps {
@@ -17,16 +18,18 @@ interface SliderMProps {
 export function SliderM({mission}: SliderMProps) {
     const cachedValue = getProgress(mission.id);
     const [val, setVal] = useState(cachedValue);
-    const {progress, setProgress} = useBetween(useShareableState);
+    const {progress, setProgress} = sharedProgresses[mission.id]();
+    // setProgress(cachedValue)
     
     const handleChange = (mission: Mission, prog: number) => {
-        setProgress(progress);
-        update(mission, prog)
-        handleIncrement(progress, mission.required)
+        setProgress(prog);
+        // update(mission, prog)
+        // handleIncrement(progress, mission.required)
     }
+
     return (
         <div>
-            <div className="inline">
+            <div className="inline gap-2 -space-x-4">
                 <p className={jua.className} style={{color:"hsl(var(--primary-progress))", fontSize:"small"}}>
                     0
                 </p>

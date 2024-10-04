@@ -8,12 +8,7 @@ import { SliderM } from "./slider_mission"
 import { Mission } from "../mission"
 
 
-export const useShareableState = () => {
-    const [progress, setProgress] = useState('LineM');
-    return {
-        progress, setProgress
-    }
-}
+export let sharedProgresses: Record<string, any> = {}
 
 
 interface LineMProps<Mission> {
@@ -21,11 +16,19 @@ interface LineMProps<Mission> {
 }
 
 export function LineM<TValue>({mission}: LineMProps<Mission>) {
-
+    const useShareableState = () => {
+        const [progress, setProgress] = useState(0);
+        return {
+            progress, setProgress
+        }
+    }
+    const useSharedProgress = () => useBetween(useShareableState);
+    sharedProgresses[mission.id] = useSharedProgress; 
+    
     return (
         <div className="mission-item">
             <div className="mission-item-row-left">
-                <ProgressM req={mission.required}></ProgressM>
+                <ProgressM mission={mission}></ProgressM>
             </div>
             <div className="mission-item-row-right">
                 <h4>{mission.prompt}</h4>
