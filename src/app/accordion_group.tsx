@@ -1,7 +1,8 @@
 import { Columns } from "./columns"
 import { DataTable } from "./datatable"
+import { jua } from "./fonts"
 
-import { LineM } from "./mission/layout_mission"
+import { Missions } from "./mission/missions"
 
 import {
     Accordion,
@@ -18,13 +19,13 @@ interface AccordionMGroupProps<TValue, TData> {
 export function AccordionMGroup<TValue, TData>({title, data}: AccordionMGroupProps<TValue, TData>){
     return (
         <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-                <AccordionTrigger>{title}</AccordionTrigger>
+            <AccordionItem value="item-1" className="accordion-item-group">
+                <AccordionTrigger className={jua.className}>{title}</AccordionTrigger>
                 <AccordionContent>
                 {/* <div className="container py-5">
                     <DataTable columns={Columns} data={data} />
                 </div> */}
-                    <LineM missions={data}></LineM>
+                    <Missions missions={data}></Missions>
                 </AccordionContent>
             </AccordionItem>
         </Accordion>

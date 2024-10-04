@@ -16,7 +16,7 @@ function mod(n: number, m: number) {
 }
 
 export function ClockCountdown<TValue>({daysLeft} : ClockCountdownProps<TValue>) {
-  const [progress, setProgress] = React.useState(new Date())
+  const [_, setProgress] = React.useState(new Date())
   
   React.useEffect(() => {
     const intervalId = setInterval(() => {
@@ -34,20 +34,16 @@ export function ClockCountdown<TValue>({daysLeft} : ClockCountdownProps<TValue>)
   return (
     <div style={{textAlign:"center", display:"inline-flex", marginLeft:"auto", marginRight:"auto"}}>
         <Clock style={{color:"hsl(var(--secondary-foreground))", marginInline:"5px", marginTop:"4%"}}></Clock>
-        <Badge style={{backgroundColor:"hsl(var(--muted))"}}>
-            {daysLeft ? <Label className="text-lg" style={{color:"hsl(var(--secondary))", marginInlineEnd:"1px"}}><h6><b>
-              {days.toString()}</b></h6></Label>
-            : ""}
-            {daysLeft ? <Label style={{color:"hsl(var(--primary-progress))", marginInlineEnd:"5px", fontSize:"small"}}>
-              d</Label>
-            : ""}
+        <Badge style={{backgroundColor:"hsl(var(--primary-foreground))"}}>
+            {daysLeft ? <Label className="clock_text_num">{days.toString()}</Label> : ""}
+            {daysLeft ? <Label className="clock_text_char">d</Label> : ""}
             
-            <Label className="text-lg" style={{marginInlineEnd:"1px"}}><h6><b>{hrs.toString()}</b></h6></Label>
-            <Label style={{color:"hsl(var(--primary-progress))", marginInlineEnd:"5px", fontSize:"small"}}>h</Label>
-            <Label className="text-lg" style={{marginInlineEnd:"1px"}}><h6><b>{mins.toString()}</b></h6></Label>
-            <Label style={{color:"hsl(var(--primary-progress))", marginInlineEnd:"5px", fontSize:"small"}}>m</Label>
-            <Label className="text-lg" style={{marginInlineEnd:"1px"}}><h6><b>{secs.toString()}</b></h6></Label>
-            <Label style={{color:"hsl(var(--primary-progress))", marginInlineEnd:"5px", fontSize:"small"}}>s</Label>
+            <Label className="clock_text_num">{hrs.toString()}</Label>
+            <Label className="clock_text_char">h</Label>
+            <Label className="clock_text_num">{mins.toString()}</Label>
+            <Label className="clock_text_char">m</Label>
+            <Label className="clock_text_num">{secs.toString()}</Label>
+            <Label className="clock_text_char" style={{marginInlineEnd:"0px"}}>s</Label>
         </Badge>
     </div>
   )

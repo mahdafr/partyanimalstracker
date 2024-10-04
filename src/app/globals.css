@@ -43,7 +43,7 @@
   --popover: 222.2 84% 4.9%;
   --popover-foreground: 222.2 84% 4.9%;
   --primary: 30.34 84.76% 35%;
-  --primary-foreground: 43.13 85.71% 8%;
+  --primary-foreground: 243.13 15% 9.5%;
   --primary-progress: 270 2.22% 60%;
   --secondary: 270 2.22% 45%;
   --secondary-foreground: 44.65 75.44% 75%;
@@ -79,10 +79,82 @@
   justify-content: space-between;
 }
 
-p {
-  margin:auto;
-  width:50%;
+.inline {
+  display: flex;
+  justify-content: center;
+  margin-inline:-10px;
+}
+
+.clock_text_num {
+  font-size: large;
+  margin-inline-end:1px;
+  color:hsl(var(--secondary-foreground));
+  margin-top:-2%
+}
+
+.clock_text_char {
+  color:hsl(var(--primary-progress));
+  margin-inline-end:5px;
+  font-size:small
+}
+
+.accordion-trigger {
+  justify-content:center;
+  padding:15px;
+}
+
+.accordion-item-group {
+  border-block-end-color: hsl(var(--muted-foreground));
+  border-block-end-width: 1px;
+}
+
+.accordion-item {
+  border-block-end-color:hsl(var(--muted-table-header));
+  border-block-end-width:1px;
+  border-top-color:hsl(var(--muted-table-header));
+  border-top-width:1px;
+}
+
+.accordion-item:hover {
+  border-top-color:hsl(var(--muted-table-header));
+  border-top-width:2px;
+  border-block-end-color: hsl(var(--muted-table-header));
+  border-bottom-width:2px;
+  border-block-end-width:2px;
+}
+
+.mission-item {
+  display: grid;
+  grid-template-columns: 30% 55%;
+  /* margin:11px; */
+  margin-block: -15px;
+  /* height:fit-content; */
+  /* height: max-content; */
+  /* height: min-content; */
+}
+
+.mission-item-row-left {
+  display: flex;
+  /* float: inherit; */
+  /* position: relative; */
+  transform: scale(0.8);
+  /* left: 10px; */
+  /* position:fixed;  */
+  /* margin-left: 0; */
+  /* margin-block: 25px; */
+  /* height:fit-content; */
+  /* height: max-content; */
+  /* height: min-content; */
+}
+
+.mission-item-row-right {
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  /* height:fit-content; */
+  /* height: max-content; */
+  /* height: min-content; */
 }
 
 p {
@@ -93,28 +165,16 @@ p {
 }
 
 h1 {
-  margin:auto;
-  width:50%;
   text-align: center;
+  font-size:xxx-large;
   color: hsl(30.34 84.76% 50%);
 }
 
-h4 {
-  margin:auto;
-  font-weight: bold;
-  color: hsl(var(--foreground));
+h2 {
+  text-align: center;
+  font-size:xx-large;
 }
 
-h5 {
-  margin:auto;
-  align-content: left;
-  color: hsl(var(--foreground));
-}
-
-h6 {
-  margin:auto;
-  color: hsl(var(--muted-foreground-table-header));
-}
 
 a:link {
   color: hsl(221.63 94.12% 66.67%);

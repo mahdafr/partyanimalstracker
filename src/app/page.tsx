@@ -32,27 +32,24 @@ export default async function Page() {
   const weeklies = getMissions(data_json["weeklies"], 4, false, false, "weeklies");
 
   return (
-    <div className="space-x-2 px-5 py-5">
+    <div className="space-x-2 px-5 py-5" suppressHydrationWarning>
       <Card className="justify-center">
         <CardHeader>
           <CardTitle>
             <div className={concertone.className}>
-              {/* info button */}
+              {/* header buttons */}
               <div className="navigation">
-                {/* theme button */}
                 <ThemeButton/>
                 <Sidebar/>
               </div>
               {/* title and description */}
-              <h1 className="text-4xl" style={{justifyItems: "center", textAlign:"center", justifyContent:"center"}}>PARTY ANIMALS</h1>
-              <h2 className="text-2xl" style={{textAlign:"center", justifyContent:"center"}}>Mission Tracker</h2>
+              <h1>PARTY ANIMALS</h1>
+              <h2>Mission Tracker</h2>
             </div>
           </CardTitle>
         </CardHeader>
-        <CardDescription className="w-full justify-between space-x-2 py-2">
-          <h4 className="text-md" style={{marginLeft:"9px", marginRight:"9px"}}>
+        <CardDescription className="w-full" style={{marginTop:"-15px", color:"hsl(var(--foreground))", padding:"6%"}}>
             Your online tool to help track your progress towards daily and weekly missions in Party Animals.
-          </h4>
         </CardDescription>
         <CardContent>
           <Tabs defaultValue="daily">
