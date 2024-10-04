@@ -79,6 +79,14 @@
 .navigation {
   display: flex;
   justify-content: space-between;
+  margin-right:8px;
+}
+
+.accordion-trigger-fill {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* float:right */
+  justify-content:center;
 }
 
 .inline {

@@ -1,10 +1,12 @@
 'use client'
 
-import React from "react"
+import React, { useState } from "react"
+import { useBetween } from "use-between"
 
 import { LineM } from "./line_missions"
 import { Mission } from "../mission/mission"
-import { BadgeM, Status } from "./badge_mission"
+import { BadgeM } from "./badge_mission"
+import { getProgress } from "../mission/cookies"
 
 import {
     Accordion,
@@ -15,11 +17,25 @@ import {
 import { jua } from "../fonts"
 
 
+export let sharedProgresses: Record<string, any> = {}
+
+
 interface MissionsProps<Mission> {
     missions: Mission[]
 }
 
 export function Missions<TValue>({missions}: MissionsProps<Mission>) {
+    for (const mission of missions){
+        const useShareableState = () => {
+            const [progress, setProgress] = useState(getProgress(mission.id));
+            return {
+                progress, setProgress
+            }
+        }
+        const useSharedProgress = () => useBetween(useShareableState);
+        sharedProgresses[mission.id] = useSharedProgress; 
+    }
+
     return (
         <Accordion type="multiple" className="w-full"
                         style={{strokeWidth:"2px"}}

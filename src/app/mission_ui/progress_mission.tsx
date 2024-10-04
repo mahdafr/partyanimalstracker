@@ -1,10 +1,9 @@
 "use client";
 
-import { sharedProgresses } from "./line_missions";
+import { sharedProgresses } from "./accordion_mission";
 import { Mission } from "../mission/mission";
 
 import AnimatedCircularProgressBar from "@/components/ui/animated-circular-progress-bar";
-import React from "react";
 
 
 interface ProgressMProps<TValue> {
@@ -28,11 +27,12 @@ interface ProgressBarMProps {
 
 export function ProgressBarM({style, max, curr}: ProgressBarMProps) {
   return (
-  <AnimatedCircularProgressBar className={style}
-    max={max}
-    min={0}
-    value={curr}
-    gaugePrimaryColor="hsl(var(--primary))"
-    gaugeSecondaryColor="hsl(var(--secondary))"
-  />)
+    <AnimatedCircularProgressBar className={style}
+      max={max}
+      min={0}
+      value={curr}
+      gaugePrimaryColor="hsl(var(--primary))"
+      gaugeSecondaryColor="hsl(var(--secondary))"
+    />
+  )
 }
