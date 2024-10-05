@@ -12,9 +12,13 @@ export function getDueDayEnum(dueDay: number) {
     return DueDay.NONE
 }
 
+export function dayInET(now: Date) {
+    return now.getUTCDay() + (((now.getUTCHours() - 4) < 0) ? 1 : 0)
+}
+
 
 export function getDays(now: Date, dueDay: number) {
-    return mod(7 - dueDay - (now.getUTCDay()+(((now.getUTCHours() - 4)<7) ? 1 : 7)), 7)
+    return mod(6 - dayInET(now) + dueDay, 7)
 }
 
 

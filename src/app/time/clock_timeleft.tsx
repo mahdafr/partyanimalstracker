@@ -32,28 +32,26 @@ export function ClockCountdown<TValue>({daysLeft, dueDay} : ClockCountdownProps<
   var mins = 59 - now.getUTCMinutes()
   var secs = 59 - now.getUTCSeconds()
 
-  var scale = daysLeft ? 0.85 : 1;
-  var color = daysLeft ? "hsl(var(--secondary))" : "hsl(var(--secondary-foreground))" 
-
   return (
     <div style={{textAlign:"center", display:"inline-flex", marginLeft:"auto", marginRight:"auto"}}>
-      {daysLeft ? "" : <Clock style={{color:color, marginInline:"2px", scale:scale}}></Clock>}
-      <Badge style={{backgroundColor:"hsl(var(--primary-foreground))", scale:scale}}>
+      <Clock style={{color:"hsl(var(--foreground))", marginInline:"2px"}}></Clock>
+      <Badge style={{backgroundColor:"hsl(var(--primary-foreground))"}}>
           {daysLeft ?
             <>
               <Label className="clock_text_num"><div className={jua.className}>{days.toString()}</div></Label>
-              <Label className="clock_text_char" style={{marginInline:"2px", marginInlineEnd:"0px"}}>day{days > 1 ? "s" : ""}!</Label>
+              <Label className="clock_text_char">d</Label>
             </>
             :
-            <>
-              <Label className="clock_text_num"><div className={jua.className}>{hrs.toString()}</div></Label>
-              <Label className="clock_text_char">h</Label>
-              <Label className="clock_text_num"><div className={jua.className}>{mins.toString()}</div></Label>
-              <Label className="clock_text_char">m</Label>
-              <Label className="clock_text_num"><div className={jua.className}>{secs.toString()}</div></Label>
-              <Label className="clock_text_char" style={{marginInlineEnd:"0px"}}>s</Label>
-            </>
+            <></>
           }
+          <>
+            <Label className="clock_text_num"><div className={jua.className}>{hrs.toString()}</div></Label>
+            <Label className="clock_text_char">h</Label>
+            <Label className="clock_text_num"><div className={jua.className}>{mins.toString()}</div></Label>
+            <Label className="clock_text_char">m</Label>
+            <Label className="clock_text_num"><div className={jua.className}>{secs.toString()}</div></Label>
+            <Label className="clock_text_char" style={{marginInlineEnd:"0px"}}>s</Label>
+          </>
         </Badge>
     </div>
   )

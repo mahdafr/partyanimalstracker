@@ -24,11 +24,11 @@ function getStatusEnum(progress: number, required: number) {
 }
 
 
-interface BadgeMProps<TValue> {
+interface BadgeProgressMProps<TValue> {
     mission: Mission
 }
 
-export function BadgeM<TValue>({mission}: BadgeMProps<Mission>) {
+export function BadgeProgressM<TValue>({mission}: BadgeProgressMProps<Mission>) {
     const {progress} = sharedProgresses[mission.id]();
     
     const status = getStatusEnum(progress, mission.required);

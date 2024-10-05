@@ -5,7 +5,7 @@ import { useBetween } from "use-between"
 
 import { LineM } from "./line_missions"
 import { Mission } from "../mission/mission"
-import { BadgeM } from "./badge_mission"
+import { BadgeProgressM } from "./badge_mission"
 import { getProgress } from "../mission/cookies"
 
 import {
@@ -38,14 +38,13 @@ export function Missions<TValue>({missions}: MissionsProps<Mission>) {
 
     return (
         <Accordion type="multiple" className="w-full"
-                        style={{strokeWidth:"2px"}}
                         defaultValue={missions.map(m => m.id)}>
             {missions.map(mission => (
                 <div key={mission.id}>
                     <AccordionItem value={mission.id} className="accordion-item">
                         <AccordionTrigger className="accordion-trigger">
                             <React.Fragment>
-                                <BadgeM mission={mission}></BadgeM>
+                                <BadgeProgressM mission={mission}></BadgeProgressM>
                                 <div className={jua.className}>
                                     {mission.reward}
                                 </div>

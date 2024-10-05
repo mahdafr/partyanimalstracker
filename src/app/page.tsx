@@ -38,7 +38,7 @@ export default async function Page() {
           <CardTitle>
             <div className={concertone.className}>
               {/* header buttons */}
-              <div className="navigation">
+              <div className="navigation-header">
                 <ThemeButton/>
                 <Sidebar/>
               </div>
@@ -48,7 +48,7 @@ export default async function Page() {
             </div>
           </CardTitle>
         </CardHeader>
-        <CardDescription className="w-full" style={{marginTop:"-15px", color:"hsl(var(--foreground))", padding:"6%"}}>
+        <CardDescription className="w-full" style={{color:"hsl(var(--foreground))", padding:"25px"}}>
             Your online tool to help track your progress towards daily and weekly missions in Party Animals.
         </CardDescription>
         <CardContent>
@@ -68,29 +68,43 @@ export default async function Page() {
                 <CardHeader>
                   <CardTitle></CardTitle>
                   <ClockCountdown daysLeft={false} dueDay={-1}/>
+                  {/* <p style={{fontSize:"xx-small", fontStyle:"italic", color:"hsl(var(--primary-progress))"}}>to midnight</p> */}
                 </CardHeader>
                 <CardDescription></CardDescription>
                 <CardContent className="space-y-2">
-                  <AccordionMGroup title="Woof Faction Missions" data={woof_dailies} daysBadge={false} dueDay={-1} />
-                  <AccordionMGroup title="Meow Faction Missions" data={meow_dailies} daysBadge={false} dueDay={-1} />
+                  <AccordionMGroup title="Woof Faction Missions" data={woof_dailies} />
+                  <AccordionMGroup title="Meow Faction Missions" data={meow_dailies} />
                 </CardContent>
               </Card>
             </TabsContent>
             
             {/* weeklies */}
             <TabsContent value="weekly">
-            <Card style={{backgroundColor:"hsl(var(--background))"}}>
+              {/* non-event weekly missions */}
+              <Card style={{backgroundColor:"hsl(var(--background))", marginBottom:"9px"}}>
                 <CardHeader>
                   <CardTitle></CardTitle>
-                  <ClockCountdown daysLeft={false} dueDay={-1} />
+                  <ClockCountdown daysLeft={true} dueDay={0} />
+                    {/* <p style={{fontSize:"x-small", fontStyle:"italic", padding:"-5px", color:"hsl(var(--primary-progress))", margin:"1px"}}>til day end</p> */}
                 </CardHeader>
-                <CardDescription></CardDescription>
+                <CardDescription>
+                </CardDescription>
                 <CardContent className="space-y-2">
-                  {/* non-event weekly missions */}
-                  <AccordionMGroup title="Weekly Missions" data={weeklies} daysBadge={true} dueDay={0} />
-                  {/* event weekly missions */}
-                  <AccordionMGroup title="Woof Faction Missions" data={woof_weeklies} daysBadge={true} dueDay={3} />
-                  <AccordionMGroup title="Meow Faction Missions" data={meow_weeklies} daysBadge={true} dueDay={3} />
+                  <AccordionMGroup title="Weekly Missions" data={weeklies} />
+                </CardContent>
+              </Card>
+              
+              {/* event weekly missions */}
+              <Card style={{backgroundColor:"hsl(var(--background))"}}>
+                <CardHeader>
+                  <CardTitle></CardTitle>
+                  <ClockCountdown daysLeft={true} dueDay={3} />
+                </CardHeader>
+                <CardDescription>
+                </CardDescription>
+                <CardContent className="space-y-2">
+                  <AccordionMGroup title="Woof Faction Missions" data={woof_weeklies} />
+                  <AccordionMGroup title="Meow Faction Missions" data={meow_weeklies} />
                 </CardContent>
               </Card>
             </TabsContent>

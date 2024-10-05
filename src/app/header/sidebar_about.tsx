@@ -1,6 +1,7 @@
-import { concertone, playpen } from "../fonts"
-import { BadgeInfo, Linkedin, Globe } from "lucide-react"
+import { concertone, jua } from "../fonts"
+import { BadgeInfo, Twitter, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
+
 import {
   Alert,
   AlertDescription,
@@ -25,35 +26,40 @@ export const Sidebar = () => {
                 <BadgeInfo className="h-7 w-7"/>
             </Button>
             </SheetTrigger>
-            <SheetContent className="w-[300px] sm:w-[540px]" side="right">
+            <SheetContent className="w-[75%]" side="right">
                 <SheetHeader>
                     <SheetTitle className={concertone.className}>
                         <h1 className="text-2xl">About</h1>
                     </SheetTitle>
                     <Alert>
-                        <AlertTitle className={playpen.className}><b>Thanks for your patience!</b></AlertTitle>
+                        <AlertTitle className={jua.className} style={{textAlign:"center", fontSize:"1.1rem"}}>
+                            Thanks for your patience!
+                        </AlertTitle>
                         <AlertDescription>
-                            This application is a work in progress and updates are rolled out regularly.
+                            <p className="w-full" style={{color:"hsl(var(--primary-progress))", fontSize:"0.95rem"}}>
+                                This application is a work in progress and updates are rolled out regularly.
+                            </p>
                         </AlertDescription>
                     </Alert>
                     <SheetDescription className="w-full justify-between space-x-2 py-2">
-                        <div className={playpen.className}>
-                            <p className="w-full" style={{color:"hsl(var(--foreground))"}}>
+                        <div className={jua.className} style={{marginLeft:"-6px"}}>
+                            <p className="w-full" style={{fontSize:"1.1rem", color:"hsl(var(--foreground))", lineHeight:"1.5rem"}}>
                                 Thanks for using my first project building a web application in NextJS!
                             </p>
                         </div>
-                        <div className="center space-x-2 py-4">
-                            <p className="w-full" style={{color:"hsl(var(--foreground))"}}>
-                                I'd love to give a shoutout to the developer for the <a href="https://www.paliatracker.com" >Palia Tracker</a> project that has inpired me with its beautiful interface and awesome libraries.
+                        <div className="center space-x-2 py-4" style={{marginLeft:"-5px"}}>
+                            <p className="w-full" style={{fontSize:"0.9rem", color:"hsl(var(--primary-progress))", lineHeight:"1.5rem"}}>
+                                I'd love to give a shoutout to the developer for the <a href="https://www.paliatracker.com" >Palia Tracker</a> project that has inspired me with its beautiful interface and awesome libraries.
                             </p>
                         </div>
-                        <a href="https://www.linkedin.com/in/mahdafr">
-                            <Button variant="ghost"><Linkedin/></Button></a>
-                        <a href="http://mahdafr.com/">
-                            <Button variant="ghost"><Globe/></Button></a>
                     </SheetDescription>
                 </SheetHeader>
                 <SheetFooter>
+                    <div className="w-full" style={{display:"flex", justifyContent:"center"}}>
+                        <a href="https://www.x.com/partyanimalsmt">
+                            <Button variant="ghost"><Twitter/><p style={{marginInlineStart:"5px"}}>@partyanimalsmt</p></Button>
+                        </a>
+                    </div>
                     <SheetClose/>
                 </SheetFooter>
             </SheetContent>

@@ -76,10 +76,13 @@
   }
 }
 
-.navigation {
+.navigation-header {
   display: flex;
   justify-content: space-between;
   margin-right:8px;
+  margin-top:-8px;
+  margin-bottom: 15px;
+  padding: 5px;
 }
 
 .accordion-trigger-fill {
@@ -103,10 +106,10 @@
 }
 
 .clock_text_char {
-  color:hsl(var(--primary-progress));
-  margin-top:2%;
+  font-size:small;
   margin-inline-end:6px;
-  font-size:small
+  color:hsl(var(--primary-progress));
+  margin-top:-2%;
 }
 
 .accordion-trigger {
@@ -136,13 +139,15 @@
 .mission-item {
   display: grid;
   justify-content: center;
-  grid-template-columns: 25% 70%;
-  margin-block:-15px;
+  grid-template-columns: 35% 65%;
+  max-width: 700px;
+  margin:auto;
 }
 
 .mission-item-row-left {
   display: flex;
   transform: scale(0.8);
+  justify-content: center;
 }
 
 .mission-item-row-left-base {
@@ -164,11 +169,36 @@
   flex-direction: column;
 }
 
+.navigation-slider {
+  display: flex;
+  justify-content: center;
+}
+
+.slider-m {
+  width: 65%;
+  text-align: center;
+  margin:5px;
+}
+
+.slider-text-limits {
+  color:hsl(var(--primary-progress));
+  font-size:small;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.slider-text-value {
+  font-size:x-large;
+}
+
+
 p {
   margin:auto;
   width:50%;
   text-align: center;
   font-size: small;
+  line-height: 20px;
+  padding: 2px;
 }
 
 h1 {
