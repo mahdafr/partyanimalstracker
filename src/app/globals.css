@@ -4,26 +4,40 @@
 
 @layer base {
   :root {
-    --background: 44.65 75.44% 94%;
-    --foreground: 30 1.14% 34.51%; 
-    --card: 43.13 85.71% 85%;
-    --card-foreground: 30 1.14% 30%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 30.34 84.76% 58.82%;
-    --primary-foreground: 43.13 85.71% 78.04%;
-    --primary-progress: 44.65 50% 35%;
-    --secondary: 44.65 50% 75%;
-    --secondary-foreground: 270 2.22% 35.29%;
-    --muted: 30.34 84.76% 58.82%;
-    --muted-foreground: 270 2.22% 38%;
+    /* PAGE */
+    --background: 44.65 75.44% 90%; /* XLIGHTTAN*/
+    --card: 43.13 80% 80%; /* MED-TAN*/
+    --primary: 30.34 80% 47%; /* ORANGE*/
+    --secondary: 44.65 50% 70%;  /* LIGHTTAN UGLY */
+    --secondary-badge: 44.04 59.56% 75%;  /* LIGHTTAN UGLY */
+    --tertiary-badge: 215.45 100% 95%;  /* BLUE */
+    --muted: 30.34 65% 55%; /* DARK ORANGE */
+    --separators: 44.65 75.44% 75%;
+    --card-mission-background: 215.45 1% 97%; /* BLUE */
+    --card-mission-background-hover: 215.45 5% 100%; /* BLUE */
+    --accent: 44.65 75.44% 88.82%;
     --muted-table-header: 43.13 85.71% 85%;
     --muted-table-selected: 43.13,85.71%,85%,55%;
     --muted-foreground-table-header: 43 50% 20%;
-    --accent: 44.65 75.44% 88.82%;
-    --accent-foreground: 84.39 56.16% 42.94%;
+
+    /* TEXT */
+    --foreground: 30 1.14% 30%; 
+    --card-foreground: 30 1.14% 30%;
+    --h1-color: 30.34 80% 47%;
+    --primary-foreground: 43.13 85.71% 78.04%;
+    --primary-progress: 43.54 71.93% 25%;
+    --secondary-foreground: 270 2.22% 35.29%;
+    --muted-foreground: 270 2.22% 38%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --foreground-badge-mission-not-started: 30.34 85% 45%;
+    --foreground-badge-mission-completed: 89.1 60% 40%;
+    --accent-foreground: 89.1 60% 40%; /* GREEN */
+
+    /* MISC */
+    --clock: black;
+    --popover: 222.2 84% 4.9%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: white;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
@@ -37,23 +51,38 @@
 }
 
 [data-theme="dark"] {
-  --background: 265 6.5% 20%;
-  --foreground: 43.13 45% 70%;
-  --card: 243.13 15% 11%;
-  --card-foreground: 43.13 45% 70%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --primary: 30.34 84.76% 35%;
+  /* PAGE */
+  --background: 213 10% 9%;
+  --card: 213 10% 20%;
+  --primary: 30.34 75% 35%;
+  --secondary: 44 60% 10%;
+  --secondary-badge: 44.04 50% 15%;  /* LIGHTTAN UGLY */
+  --tertiary-badge: 44.04 1% 15%;
+  --muted: 214.88 70% 15%; /* BLUE */
+  --separators: 44.65 75.44% 15%;
+  --card-mission-background: 213 10% 20%;
+  --card-mission-background-hover: 213 1% 25%;
+  --accent: 213 15% 5%;
+  --muted-table-header: 243.13 12.5% 100%;
+  --muted-table-selected: 30, 25% 12.5% 100%;
+  --muted-foreground-table-header: 43 50% 100%;
+
+    /* TEXT */
+  --foreground: 43.13 30% 65%;
+  --card-foreground: 43.13 35% 65%;
+  --h1-color: 30.34 80% 45%;
   --primary-foreground: 243.13 15% 9.5%;
-  --primary-progress: 270 2.22% 60%;
-  --secondary: 270 2.22% 45%;
-  --secondary-foreground: 44.65 75.44% 75%;
-  --muted: 30 25% 12.5%;
-  --muted-table-header: 243.13 12.5% 13%;
-  --muted-table-selected: 30, 25%,12.5%,30%;
-  --muted-foreground-table-header: 43 50% 60%;
-  --accent: 270 2.22% 20%;
-  --accent-foreground: 84.39 60% 40%;
+  --primary-progress: 270 2.22% 65%;
+  --secondary-foreground: 44.65 75.44% 50%;
+  --muted-foreground: 43 50% 45%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --foreground-badge-mission-not-started: 30.34 80% 60%;
+  --foreground-badge-mission-completed: 89.1 60% 40%;
+  --accent-foreground: 214.88 50% 45%; /* BLUE */
+
+  /* MISC */
+  --clock: 44 50% 80%;
+  --popover: 222.2 84% 4.9%;
   --destructive: 210 40% 98%;
   --destructive-foreground: 0 84.2% 60.2%;
   --border: 270 2.22% 5%;
@@ -76,72 +105,126 @@
   }
 }
 
-.navigation-header {
-  display: flex;
-  justify-content: space-between;
-  margin-right:8px;
-  margin-top:-8px;
-  margin-bottom: 15px;
-  padding: 5px;
+
+/* ****************************** ALERT DIALOG ****************************** */
+.alert-dialog {
+  font-style: italic;
+  text-align: center;
+  font-size: 1.2rem;
+  color: hsl(var(--primary-progress));
+  border-color: transparent;
+  background-color: hsl(var(--card));
 }
 
-.accordion-trigger-fill {
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* float:right */
-  justify-content:center;
+
+/* ****************************** ACCORDIONS ****************************** */
+.accordion-mission-group {
+  border-block-end-color: hsl(var(--separators));
+  border-block-end-width: 1.5px;
 }
 
-.inline {
-  display: flex;
-  justify-content: center;
-  margin-inline:-10px;
+.accordion-mission-group:hover :active {
+  color: hsla(var(--muted));
 }
 
-.clock_text_num {
-  font-size: large;
-  margin-inline-end:1px;
-  color:hsl(var(--secondary-foreground));
-  margin-top:1%;
+.accordion-mission-item {
+  max-width: 700px;
+  margin:auto;
+  border-block-start-color: transparent;
+  border-block-end-color: transparent;
 }
 
-.clock_text_char {
-  font-size:small;
-  margin-inline-end:6px;
-  color:hsl(var(--primary-progress));
-  margin-top:-2%;
+.accordion-mission-item:hover {
+  border-top-width:0px;
+  border-bottom-width:0px;
+  background-color: hsl(var(--card-mission-background-hover));
+  border-radius: 25px;
 }
 
-.accordion-trigger {
+.accordion-mission-trigger {
   justify-content:center;
   padding:15px;
 }
 
-.accordion-item-group {
-  border-block-end-color: hsl(var(--muted-foreground));
-  border-block-end-width: 1px;
+.accordion-trigger-fill {
+  justify-content:center;
 }
 
-.accordion-item {
-  border-block-end-color:hsl(var(--muted-table-header));
-  border-block-end-width:1px;
-  border-top-color:hsl(var(--muted-table-header));
-  border-top-width:1px;
+
+/* ****************************** BADGES ****************************** */
+.badge-clock {
+  background-color: hsl(var(--secondary-badge));
 }
 
-.accordion-item:hover {
-  border-top-width:0px;
-  border-bottom-width:0px;
-  background-color:hsla(var(--muted-table-selected));
+.badge-missionprog {
+  background-color: hsl(var(--tertiary-badge));
+  color: hsl(var(--foreground));
+}
+
+
+/* ****************************** CARDS ****************************** */
+.card {
+  border-color: transparent;
+}
+
+.card-mission {
+  box-shadow: none;
+  background-color: transparent;
+  border-block-start-color: transparent;
+  border-block-end-color: transparent;
+  border-block-color: transparent;
+  border-block-width: 5px;
+  border-radius: 10px;
+  padding: 0px;
+  max-width: 700px;
+  margin:auto;
+}
+
+.card-mission-content {
+  box-shadow: none;
+  background-color: hsl(var(--card-mission-background));
+  padding: 0px;
+  max-width: 700px;
+  margin:auto;
+  border-block-color: transparent;
+  border-block-width: 0px;
   border-radius: 10px;
 }
 
+
+/* ****************************** CLOCKS ****************************** */
+.clock {
+  text-align: center;
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clock-icon {
+  color: hsl(var(--clock));
+  margin-inline: 2px;
+}
+
+.clock_text_char {
+  font-size:small;
+  color:hsl(var(--muted-foreground));
+  margin-inline-end:6px;
+  margin-top:-2%;
+}
+
+.clock_text_num {
+  font-size: large;
+  color:hsl(var(--foreground));
+  margin-inline-end:1px;
+  margin-top:1%;
+}
+
+
+/* ****************************** MISSION ROW ****************************** */
 .mission-item {
   display: grid;
   justify-content: center;
   grid-template-columns: 35% 65%;
-  max-width: 700px;
-  margin:auto;
 }
 
 .mission-item-row-left {
@@ -167,6 +250,15 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  padding-right: 10px;
+}
+
+
+/* ****************************** PAGE ****************************** */
+.navigation-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .navigation-slider {
@@ -174,6 +266,18 @@
   justify-content: center;
 }
 
+.inline {
+  display: flex;
+  justify-content: center;
+  margin-inline:-10px;
+}
+
+.separator-line {
+  background-color: hsl(var(--separators));
+}
+
+
+/* ****************************** SLIDERS ****************************** */
 .slider-m {
   width: 65%;
   text-align: center;
@@ -192,27 +296,7 @@
 }
 
 
-p {
-  margin:auto;
-  width:50%;
-  text-align: center;
-  font-size: small;
-  line-height: 20px;
-  padding: 2px;
-}
-
-h1 {
-  text-align: center;
-  font-size:xxx-large;
-  color: hsl(30.34 84.76% 50%);
-}
-
-h2 {
-  text-align: center;
-  font-size:xx-large;
-}
-
-
+/* ****************************** LINKS ****************************** */
 a:link {
   color: hsl(221.63 94.12% 66.67%);
   background-color: transparent;
@@ -235,4 +319,32 @@ a:active {
   color: forestgreen;
   background-color: transparent;
   text-decoration: underline;
+}
+
+
+/* ****************************** TEXT ****************************** */
+p {
+  margin:auto;
+  width:50%;
+  text-align: center;
+  font-size: small;
+  line-height: 20px;
+  padding: 2px;
+}
+
+.footer-text {
+  color: hsl(var(--primary-progress));
+  padding: 5px;
+  margin-left: -6px;
+}
+
+h1 {
+  text-align: center;
+  font-size:xxx-large;
+  color: hsl(var(--h1-color));
+}
+
+h2 {
+  text-align: center;
+  font-size:xx-large;
 }

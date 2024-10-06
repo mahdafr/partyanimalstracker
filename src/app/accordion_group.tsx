@@ -17,12 +17,12 @@ interface AccordionMGroupProps<TValue, TData> {
 
 export function AccordionMGroup<TValue, TData>({title, data}: AccordionMGroupProps<TValue, TData>){
     return (
-        <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1" className="accordion-item-group">
-                <AccordionTrigger className="accordion-trigger-full">
-                    <React.Fragment>
+        <Accordion type="single" collapsible className="w-full" >
+            <AccordionItem value={"mission-group-" + title} className="accordion-mission-group">
+                <AccordionTrigger>
+                    {/* <React.Fragment> */}
                         <div className={jua.className}>{title}</div>
-                    </React.Fragment>
+                    {/* </React.Fragment> */}
                 </AccordionTrigger>
                 <AccordionContent>
                     <Missions missions={data}></Missions>

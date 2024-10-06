@@ -33,9 +33,9 @@ export function ClockCountdown<TValue>({daysLeft, dueDay} : ClockCountdownProps<
   var secs = 59 - now.getUTCSeconds()
 
   return (
-    <div style={{textAlign:"center", display:"inline-flex", marginLeft:"auto", marginRight:"auto"}}>
-      <Clock style={{color:"hsl(var(--foreground))", marginInline:"2px"}}></Clock>
-      <Badge style={{backgroundColor:"hsl(var(--primary-foreground))"}}>
+    <div className="clock">
+      <Clock className="clock-icon"></Clock>
+      <Badge className="badge-clock">
           {daysLeft ?
             <>
               <Label className="clock_text_num"><div className={jua.className}>{days.toString()}</div></Label>

@@ -33,7 +33,7 @@ export default async function Page() {
 
   return (
     <div className="space-x-2 px-5 py-5" suppressHydrationWarning>
-      <Card className="justify-center">
+      <Card className="card justify-center">
         <CardHeader>
           <CardTitle>
             <div className={concertone.className}>
@@ -64,7 +64,7 @@ export default async function Page() {
 
             {/* dailies */}
             <TabsContent value="daily">
-              <Card style={{backgroundColor:"hsl(var(--background))"}}>
+              <Card className="card" style={{backgroundColor:"hsl(var(--background))"}}>
                 <CardHeader>
                   <CardTitle></CardTitle>
                   <ClockCountdown daysLeft={false} dueDay={-1}/>
@@ -81,7 +81,7 @@ export default async function Page() {
             {/* weeklies */}
             <TabsContent value="weekly">
               {/* non-event weekly missions */}
-              <Card style={{backgroundColor:"hsl(var(--background))", marginBottom:"9px"}}>
+              <Card className="card" style={{backgroundColor:"hsl(var(--background))", marginBottom:"9px"}}>
                 <CardHeader>
                   <CardTitle></CardTitle>
                   <ClockCountdown daysLeft={true} dueDay={0} />
@@ -95,7 +95,7 @@ export default async function Page() {
               </Card>
               
               {/* event weekly missions */}
-              <Card style={{backgroundColor:"hsl(var(--background))"}}>
+              <Card className="card" style={{backgroundColor:"hsl(var(--background))"}}>
                 <CardHeader>
                   <CardTitle></CardTitle>
                   <ClockCountdown daysLeft={true} dueDay={3} />

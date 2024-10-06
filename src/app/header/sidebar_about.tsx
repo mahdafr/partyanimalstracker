@@ -1,5 +1,5 @@
 import { concertone, jua } from "../fonts"
-import { BadgeInfo, Twitter, Instagram } from "lucide-react"
+import { BadgeInfo, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 import {
@@ -31,12 +31,12 @@ export const Sidebar = () => {
                     <SheetTitle className={concertone.className}>
                         <h1 className="text-2xl">About</h1>
                     </SheetTitle>
-                    <Alert>
-                        <AlertTitle className={jua.className} style={{textAlign:"center", fontSize:"1.1rem"}}>
+                    <Alert className="alert-dialog">
+                        <AlertTitle className={jua.className + " alert-dialog"}>
                             Thanks for your patience!
                         </AlertTitle>
                         <AlertDescription>
-                            <p className="w-full" style={{color:"hsl(var(--primary-progress))", fontSize:"0.95rem"}}>
+                            <p className="w-full alert-dialog" style={{fontSize:"0.95rem"}}>
                                 This application is a work in progress and updates are rolled out regularly.
                             </p>
                         </AlertDescription>
@@ -48,7 +48,7 @@ export const Sidebar = () => {
                             </p>
                         </div>
                         <div className="center space-x-2 py-4" style={{marginLeft:"-5px"}}>
-                            <p className="w-full" style={{fontSize:"0.9rem", color:"hsl(var(--primary-progress))", lineHeight:"1.5rem"}}>
+                            <p className="w-full" style={{fontSize:"0.9rem", lineHeight:"1.5rem"}}>
                                 I'd love to give a shoutout to the developer for the <a href="https://www.paliatracker.com" >Palia Tracker</a> project that has inspired me with its beautiful interface and awesome libraries.
                             </p>
                         </div>

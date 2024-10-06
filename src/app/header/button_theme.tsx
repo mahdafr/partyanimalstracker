@@ -25,7 +25,9 @@ export const ThemeButton = () => {
 
   return (
     <div >
-      <Button variant="ghost" onClick={toggleTheme}>{(theme == "light") ? <Moon/> : <Sun/>}</Button>
+      <Button variant="ghost" onClick={toggleTheme} size="icon">
+        {(theme == "light") ? <Moon/> : <Sun/>}
+      </Button>
     </div>
   )
 }

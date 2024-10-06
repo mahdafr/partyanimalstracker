@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
 export function Footer() {
@@ -10,8 +9,8 @@ export function Footer() {
                     Party Animals Mission Tracker is a project by <a href="https://www.instagram.com/mishalovehatestech/">@mishalovehatestech</a>
                 </p>
             </div>
-            <Separator className="my-3" />
-            <p className="w-full" style={{color:"hsl(var(--primary-progress))", padding:"5px", marginLeft:"-6px"}}><em>
+            <Separator className="my-3 separator-line" />
+            <p className="w-full footer-text"><em>
                 This website uses visual elements and design influences inspired by the Party Animals game.
                 I am not affiliated with or endorsed by Party Animals, its developers, or the company behind the game.
                 All trademarks, logos, and images related to Party Animals are the property of their respective owners.

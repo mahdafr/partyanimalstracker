@@ -7,12 +7,13 @@ import { Badge } from "@/components/ui/badge"
 import { CircleSlash, CircleEllipsis, CircleCheck } from "lucide-react"
 
 import React from "react";
+import { jua } from "../fonts";
 
 
 const Status = Object.freeze({
-    NOT_STARTED : { id: 0, icon: <CircleSlash></CircleSlash>, color:"hsl(var(--secondary))"},
-    IN_PROGRESS : { id: 1, icon: <CircleEllipsis></CircleEllipsis>, color:"hsl(var(--primary-progress))"},
-    COMPLETED : { id: 2, icon: <CircleCheck></CircleCheck>, color:"hsl(var(--accent-foreground))"},
+    NOT_STARTED : { id: 0, icon: <CircleSlash></CircleSlash>, color:"hsl(var(--foreground-badge-mission-not-started))"},
+    IN_PROGRESS : { id: 1, icon: <CircleEllipsis></CircleEllipsis>, color:""},
+    COMPLETED : { id: 2, icon: <CircleCheck></CircleCheck>, color:"hsl(var(--foreground-badge-mission-completed))"},
 })
 
 function getStatusEnum(progress: number, required: number) {
@@ -34,8 +35,11 @@ export function BadgeProgressM<TValue>({mission}: BadgeProgressMProps<Mission>) 
     const status = getStatusEnum(progress, mission.required);
 
     return (
-        <Badge style={{backgroundColor:"transparent", color:status.color}}>
+        <Badge className="badge-missionprog" style={{color:status.color}}>
             {status.icon}
+            <div className={jua.className} style={{marginInlineStart:"5px"}}>
+                {mission.reward}
+            </div>
         </Badge>
     )
 }

@@ -14,7 +14,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
-import { jua } from "../fonts"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 
 export let sharedProgresses: Record<string, any> = {}
@@ -37,23 +37,23 @@ export function Missions<TValue>({missions}: MissionsProps<Mission>) {
     }
 
     return (
-        <Accordion type="multiple" className="w-full"
-                        defaultValue={missions.map(m => m.id)}>
+        <Accordion type="multiple" className="w-full" defaultValue={missions.map(m => m.id)} >
             {missions.map(mission => (
                 <div key={mission.id}>
-                    <AccordionItem value={mission.id} className="accordion-item">
-                        <AccordionTrigger className="accordion-trigger">
-                            <React.Fragment>
-                                <BadgeProgressM mission={mission}></BadgeProgressM>
-                                <div className={jua.className}>
-                                    {mission.reward}
-                                </div>
-                            </React.Fragment>
-                        </AccordionTrigger>
-                        <AccordionContent>
-                            <LineM mission={mission}></LineM>
-                        </AccordionContent>
-                    </AccordionItem>
+                    <Card className="justify-center card card-mission">
+                        <CardContent className="card-mission-content">
+                            <AccordionItem value={mission.id} className="accordion-mission-item">
+                                <AccordionTrigger className="accordion-mission-trigger">
+                                    <React.Fragment>
+                                        <BadgeProgressM mission={mission}></BadgeProgressM>
+                                    </React.Fragment>
+                                </AccordionTrigger>
+                                <AccordionContent>
+                                    <LineM mission={mission}></LineM>
+                                </AccordionContent>
+                            </AccordionItem>
+                        </CardContent>
+                    </Card>
                 </div>
             ))}
         </Accordion>
