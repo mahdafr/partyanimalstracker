@@ -37,13 +37,13 @@ export function Missions<TValue>({missions}: MissionsProps<Mission>) {
     }
 
     return (
-        <Accordion type="multiple" className="w-full" defaultValue={missions.map(m => m.id)} >
+        <Accordion type="multiple" className="space-y-3" defaultValue={missions.map(m => m.id)} >
             {missions.map(mission => (
-                <div key={mission.id}>
-                    <Card className="justify-center card card-mission">
-                        <CardContent className="card-mission-content">
-                            <AccordionItem value={mission.id} className="accordion-mission-item">
-                                <AccordionTrigger className="accordion-mission-trigger">
+                <div key={mission.id} >
+                    <Card className="justify-center card card-mission" >
+                        <CardContent className="card-mission-content" >
+                            <AccordionItem value={mission.id} className="accordion-mission-item" >
+                                <AccordionTrigger className="accordion-mission-trigger" >
                                     <React.Fragment>
                                         <BadgeProgressM mission={mission}></BadgeProgressM>
                                     </React.Fragment>

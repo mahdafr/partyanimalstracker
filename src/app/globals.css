@@ -7,6 +7,7 @@
     /* PAGE */
     --background: 44.65 75.44% 90%; /* XLIGHTTAN*/
     --card: 43.13 80% 80%; /* MED-TAN*/
+    --card-shadow: 44.04 59.56% 70%;
     --primary: 30.34 80% 47%; /* ORANGE*/
     --secondary: 44.65 50% 70%;  /* LIGHTTAN UGLY */
     --secondary-badge: 44.04 59.56% 75%;  /* LIGHTTAN UGLY */
@@ -15,6 +16,8 @@
     --separators: 44.65 75.44% 75%;
     --card-mission-background: 215.45 1% 97%; /* BLUE */
     --card-mission-background-hover: 215.45 5% 100%; /* BLUE */
+    --card-mission-shadow: 44.04 59.56% 80%;
+    --card-mission-group-shadow: 44.04 100% 80%;
     --accent: 44.65 75.44% 88.82%;
     --muted-table-header: 43.13 85.71% 85%;
     --muted-table-selected: 43.13,85.71%,85%,55%;
@@ -52,16 +55,19 @@
 
 [data-theme="dark"] {
   /* PAGE */
-  --background: 213 10% 9%;
-  --card: 213 10% 20%;
-  --primary: 30.34 75% 35%;
+  --background: 213 20% 15%;
+  --card: 214.88 8% 10%; /* BLUE */
+  --card-shadow: 214.88 20% 8%;
+  --primary: 30.34 75% 25%;
   --secondary: 44 60% 10%;
-  --secondary-badge: 44.04 50% 15%;  /* LIGHTTAN UGLY */
+  --secondary-badge: 214.88 8% 12.5%; /* BLUE */
   --tertiary-badge: 44.04 1% 15%;
-  --muted: 214.88 70% 15%; /* BLUE */
+  --muted: 30.34 75% 25%; 
   --separators: 44.65 75.44% 15%;
   --card-mission-background: 213 10% 20%;
-  --card-mission-background-hover: 213 1% 25%;
+  --card-mission-background-hover: 213 12% 25%;
+  --card-mission-group-shadow: 214.88 25% 15%;
+  --card-mission-shadow: 214.88 25% 11%;
   --accent: 213 15% 5%;
   --muted-table-header: 243.13 12.5% 100%;
   --muted-table-selected: 30, 25% 12.5% 100%;
@@ -70,7 +76,7 @@
     /* TEXT */
   --foreground: 43.13 30% 65%;
   --card-foreground: 43.13 35% 65%;
-  --h1-color: 30.34 80% 45%;
+  --h1-color: 30.34 80% 35%;
   --primary-foreground: 243.13 15% 9.5%;
   --primary-progress: 270 2.22% 65%;
   --secondary-foreground: 44.65 75.44% 50%;
@@ -99,6 +105,7 @@
 @layer base {
   * {
     @apply border-border;
+    overflow: visible !important;
   }
   body {
     @apply bg-background text-foreground;
@@ -119,6 +126,9 @@
 
 /* ****************************** ACCORDIONS ****************************** */
 .accordion-mission-group {
+  max-width: auto;
+  margin:auto;
+  overflow: unset;
   border-block-end-color: hsl(var(--separators));
   border-block-end-width: 1.5px;
 }
@@ -128,22 +138,22 @@
 }
 
 .accordion-mission-item {
-  max-width: 700px;
-  margin:auto;
   border-block-start-color: transparent;
   border-block-end-color: transparent;
+  border-radius: 10px;
 }
 
 .accordion-mission-item:hover {
   border-top-width:0px;
   border-bottom-width:0px;
   background-color: hsl(var(--card-mission-background-hover));
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
 .accordion-mission-trigger {
   justify-content:center;
   padding:15px;
+  border-radius: 10px;
 }
 
 .accordion-trigger-fill {
@@ -165,16 +175,17 @@
 /* ****************************** CARDS ****************************** */
 .card {
   border-color: transparent;
+  box-shadow: -3px 3px 2px 1px hsl(var(--card-shadow));
 }
 
 .card-mission {
-  box-shadow: none;
+  margin-inline: -10px;
+  box-shadow: -3px 3px 2px 1px hsl(var(--card-mission-shadow));
   background-color: transparent;
   border-block-start-color: transparent;
   border-block-end-color: transparent;
   border-block-color: transparent;
-  border-block-width: 5px;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 0px;
   max-width: 700px;
   margin:auto;
@@ -209,7 +220,6 @@
   font-size:small;
   color:hsl(var(--muted-foreground));
   margin-inline-end:6px;
-  margin-top:-2%;
 }
 
 .clock_text_num {
