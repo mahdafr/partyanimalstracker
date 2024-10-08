@@ -121,6 +121,7 @@
   color: hsl(var(--primary-progress));
   border-color: transparent;
   background-color: hsl(var(--card));
+  box-shadow: -3px 3px 2px 1px hsl(var(--card-shadow));
 }
 
 
@@ -230,6 +231,19 @@
 }
 
 
+/* ****************************** FOOTER ****************************** */
+.footer-centered {
+  display: flex;
+  text-align: center;
+  margin: auto;
+}
+
+.separator-line {
+  background-color: hsl(var(--separators));
+  margin: auto;
+}
+
+
 /* ****************************** MISSION ROW ****************************** */
 .mission-item {
   display: grid;
@@ -280,10 +294,6 @@
   display: flex;
   justify-content: center;
   margin-inline:-10px;
-}
-
-.separator-line {
-  background-color: hsl(var(--separators));
 }
 
 
@@ -344,8 +354,6 @@ p {
 
 .footer-text {
   color: hsl(var(--primary-progress));
-  padding: 5px;
-  margin-left: -6px;
 }
 
 h1 {

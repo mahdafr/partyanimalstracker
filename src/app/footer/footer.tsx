@@ -1,16 +1,27 @@
 import { Separator } from "@/components/ui/separator"
+import { Button } from "@/components/ui/button"
+import { BookPlus } from "lucide-react"
 
 export function Footer() {
     return (
-        <div>
-            <div style={{fontSize:"smaller", textAlign:"center"}}>
-                <p className="w-full"
-                    style={{color:"hsl(var(--primary-progress))", padding:"5px", marginLeft:"-6px", marginTop:"10px"}}>
-                    Party Animals Mission Tracker is a project by <a href="https://www.instagram.com/mishalovehatestech/">@mishalovehatestech</a>
+        <div style={{margin:"auto"}}>
+            {/* GET MISSIONS FROM USER */}
+            <div className="footer-centered" style={{paddingTop:"16px", paddingBottom:"10px", maxWidth:"350px", margin:"auto"}}>
+                <p className="w-full footer-text" style={{textAlign:"right"}}>
+                    <em>Missions not updated?</em>
                 </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSetR8h3Y5ILsj9HD3dJVvKjjDDzADtqwq7wyMJZWwuuB8M8ug/viewform?usp=sf_link" 
+                    className="w-full" >
+                    <Button variant="ghost"><BookPlus/>
+                        <p style={{marginInlineStart:"5px"}}>Submit your missions</p>
+                    </Button>
+                </a>
             </div>
-            <Separator className="my-3 separator-line" />
-            <p className="w-full footer-text"><em>
+
+            <Separator className="my-3 separator-line" style={{width:"95%"}} />
+            
+            {/* DISCLAIMER */}
+            <p className="w-full footer-text" style={{margin:"auto", padding:"15px"}}><em>
                 This website uses visual elements and design influences inspired by the Party Animals game.
                 I am not affiliated with or endorsed by Party Animals, its developers, or the company behind the game.
                 All trademarks, logos, and images related to Party Animals are the property of their respective owners.

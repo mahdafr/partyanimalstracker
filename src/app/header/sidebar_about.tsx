@@ -1,5 +1,5 @@
 import { concertone, jua } from "../fonts"
-import { BadgeInfo, Twitter } from "lucide-react"
+import { BadgeInfo, Twitter, BookPlus } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 import {
@@ -32,11 +32,11 @@ export const Sidebar = () => {
                         <h1 className="text-2xl">About</h1>
                     </SheetTitle>
                     <Alert className="alert-dialog">
-                        <AlertTitle className={jua.className + " alert-dialog"}>
+                        <AlertTitle className={jua.className}>
                             Thanks for your patience!
                         </AlertTitle>
                         <AlertDescription>
-                            <p className="w-full alert-dialog" style={{fontSize:"0.95rem"}}>
+                            <p className="w-full" style={{fontSize:"0.95rem"}}>
                                 This application is a work in progress and updates are rolled out regularly.
                             </p>
                         </AlertDescription>
@@ -47,17 +47,25 @@ export const Sidebar = () => {
                                 Thanks for using my first project building a web application in NextJS!
                             </p>
                         </div>
-                        <div className="center space-x-2 py-4" style={{marginLeft:"-5px"}}>
-                            <p className="w-full" style={{fontSize:"0.9rem", lineHeight:"1.5rem"}}>
+                        <div className="center py-4" style={{marginLeft:"-5px"}}>
+                            <p className="w-full" style={{fontSize:"0.9rem", lineHeight:"1.5rem", color:"hsl(var(--foreground))"}}>
                                 I'd love to give a shoutout to the developer for the <a href="https://www.paliatracker.com" >Palia Tracker</a> project that has inspired me with its beautiful interface and awesome libraries.
+                                Though I'm not taking full advantage of the awesome libraries they used, I had so much fun going on this front-end development journey.
+                            </p>
+                            <p style={{padding:"10px"}}></p>
+                            <p className="w-full" style={{fontSize:"0.9rem", lineHeight:"1.5rem", color:"hsl(var(--foreground))"}}>
+                                Who am I? Check out my <a href="https://www.instagram.com/mishalovehatestech/">Instagram</a>.
                             </p>
                         </div>
                     </SheetDescription>
                 </SheetHeader>
-                <SheetFooter>
-                    <div className="w-full" style={{display:"flex", justifyContent:"center"}}>
+                <SheetFooter className="w-full" style={{display:"inline-block", textAlign:"center"}}>
+                    <div className="w-full" style={{textAlign:"center"}}>
                         <a href="https://www.x.com/partyanimalsmt">
                             <Button variant="ghost"><Twitter/><p style={{marginInlineStart:"5px"}}>@partyanimalsmt</p></Button>
+                        </a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSetR8h3Y5ILsj9HD3dJVvKjjDDzADtqwq7wyMJZWwuuB8M8ug/viewform?usp=sf_link">
+                            <Button variant="ghost"><BookPlus/><p style={{marginInlineStart:"5px"}}>Submit your missions</p></Button>
                         </a>
                     </div>
                     <SheetClose/>

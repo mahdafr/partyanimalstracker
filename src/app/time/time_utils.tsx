@@ -13,7 +13,7 @@ export function getDueDayEnum(dueDay: number) {
 }
 
 export function dayInET(now: Date) {
-    return now.getUTCDay() + (((now.getUTCHours() - 4) < 0) ? 1 : 0)
+    return now.getUTCDay() - (((now.getUTCHours() - 4) < 0) ? 1 : 0)
 }
 
 
