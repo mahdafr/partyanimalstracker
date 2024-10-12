@@ -21,8 +21,8 @@
     ],
     "weeklies" : [
         {"required":15, "prompt": "Knock out 15 opponents without weapons", "reward": "1000 XP"},
-        {"required":10, "prompt": "Knock out 10 opponents with Melee Weapons in total", "reward": "3000 cookies"},
-        {"required":2, "prompt": "Use fluffy animals and win 2 Last Stand games", "reward": "2000 XP"},
+        {"required":10, "prompt": "Knock out 10 opponents with Melee Weapons in total", "reward": "2000 XP"},
+        {"required":2, "prompt": "Use fluffy animals and win 2 Last Stand games", "reward": "3000 cookies"},
         {"required":15, "prompt": "Use animal that can dive in 15 games", "reward": "3000 XP"}
     ]
 }
