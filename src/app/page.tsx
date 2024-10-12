@@ -32,7 +32,7 @@ export default async function Page() {
   const weeklies = getMissions(data_json["weeklies"], 4, false, false, "weeklies");
 
   return (
-    <div className="space-x-2 px-5 py-5" suppressHydrationWarning>
+    <div className="space-x-2 px-5 py-5" suppressHydrationWarning   style={{width:"100vw", maxWidth:"750px", margin:"auto"}}>
       <Card className="card justify-center">
         <CardHeader>
           <CardTitle>
