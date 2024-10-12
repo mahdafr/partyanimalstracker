@@ -1,6 +1,6 @@
 "use client";
 
-import { sharedProgresses } from "./accordion_mission";
+import { sharedProgresses } from "./accordion_group";
 import { Mission } from "../mission/mission";
 
 import AnimatedCircularProgressBar from "@/components/ui/animated-circular-progress-bar";

@@ -126,6 +126,12 @@
 
 
 /* ****************************** ACCORDIONS ****************************** */
+.accordion-group-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .accordion-mission-group {
   max-width: 750px;
   margin:auto;
@@ -152,6 +158,7 @@
 }
 
 .accordion-mission-trigger {
+  width: 100%;
   justify-content:center;
   padding:15px;
   border-radius: 10px;
@@ -170,6 +177,11 @@
 .badge-missionprog {
   background-color: hsl(var(--tertiary-badge));
   color: hsl(var(--foreground));
+}
+
+.badge-groupprog {
+  background-color: hsl(var(--card));
+  float: inline-end;
 }
 
 

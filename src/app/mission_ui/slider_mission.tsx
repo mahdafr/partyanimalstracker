@@ -2,7 +2,7 @@
 
 import { Slider } from "@/components/ui/slider"
 import { Mission } from "../mission/mission"
-import { sharedProgresses } from "./accordion_mission";
+import { sharedProgresses } from "./accordion_group";
 import { update } from "../mission/cookies"
 import { jua } from "../fonts";
 import React from "react";

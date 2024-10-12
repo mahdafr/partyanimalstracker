@@ -2,7 +2,7 @@ import { getMissions } from "./mission/mission"
 import { ThemeButton } from "./header/button_theme"
 import { Sidebar } from "./header/sidebar_about"
 import { Footer } from "./footer/footer"
-import { AccordionMGroup } from "./accordion_group"
+import { AccordionMGroup } from "./mission_ui/accordion_group"
 import { ClockCountdown } from "./time/clock_timeleft"
 import { concertone, jua } from "./fonts"
 import { promises as fs } from 'fs';
@@ -72,8 +72,8 @@ export default async function Page() {
                 </CardHeader>
                 <CardDescription></CardDescription>
                 <CardContent className="space-y-2">
-                  <AccordionMGroup title="Woof Faction Missions" data={woof_dailies} />
-                  <AccordionMGroup title="Meow Faction Missions" data={meow_dailies} />
+                  <AccordionMGroup title="Woof Faction Missions" missions={woof_dailies} />
+                  <AccordionMGroup title="Meow Faction Missions" missions={meow_dailies} />
                 </CardContent>
               </Card>
             </TabsContent>
@@ -90,7 +90,7 @@ export default async function Page() {
                 <CardDescription>
                 </CardDescription>
                 <CardContent className="space-y-2">
-                  <AccordionMGroup title="Weekly Missions" data={weeklies} />
+                  <AccordionMGroup title="Weekly Missions" missions={weeklies} />
                 </CardContent>
               </Card>
               
@@ -103,8 +103,8 @@ export default async function Page() {
                 <CardDescription>
                 </CardDescription>
                 <CardContent className="space-y-2">
-                  <AccordionMGroup title="Woof Faction Missions" data={woof_weeklies} />
-                  <AccordionMGroup title="Meow Faction Missions" data={meow_weeklies} />
+                  <AccordionMGroup title="Woof Faction Missions" missions={woof_weeklies} />
+                  <AccordionMGroup title="Meow Faction Missions" missions={meow_weeklies} />
                 </CardContent>
               </Card>
             </TabsContent>
