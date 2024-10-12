@@ -22,8 +22,8 @@ export function BadgeGroupM<TValue>({missions}: BadgeGroupMProps<Mission>) {
         completed += (getMissionProgressStatus(progress, mission.required) == Status.COMPLETED) ? 1 : 0
         inprogress += (getMissionProgressStatus(progress, mission.required) == Status.IN_PROGRESS) ? 1 : 0
     });
-    var color = (inprogress > 0) ? Status.IN_PROGRESS.color : Status.NOT_STARTED.color
-    color = (completed == missions.length) ? Status.COMPLETED.color : color
+    var color = ((inprogress > 0) || (completed > 0)) ? Status.IN_PROGRESS.color : Status.NOT_STARTED.color
+    color = (completed == missions.length)  ? Status.COMPLETED.color : color
 
     return (
         <Badge className="badge-groupprog" style={{color:color}}>
