@@ -15,7 +15,6 @@ interface MissionsProps<Mission> {
 }
 
 export function Missions<TValue>({missions}: MissionsProps<Mission>) {
-
     return (
         <Accordion type="multiple" className="space-y-3" >
             {missions.map(mission => (
