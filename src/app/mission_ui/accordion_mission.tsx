@@ -37,7 +37,7 @@ export function Missions<TValue>({missions}: MissionsProps<Mission>) {
     }
 
     return (
-        <Accordion type="multiple" className="space-y-3" defaultValue={missions.map(m => m.id)} >
+        <Accordion type="multiple" className="space-y-3" >
             {missions.map(mission => (
                 <div key={mission.id} >
                     <Card className="justify-center card card-mission" >

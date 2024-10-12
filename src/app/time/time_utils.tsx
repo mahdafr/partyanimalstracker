@@ -1,6 +1,6 @@
 export const DueDay = Object.freeze({
     SUNDAY : { id: 0},
-    WEDNESDAY : { id: 3},
+    THURSDAY : { id: 4},
     NONE : { id: -1},
 })
 
@@ -8,7 +8,7 @@ export function getDueDayEnum(dueDay: number) {
     if ( dueDay === 0 )
         return DueDay.SUNDAY
     if ( dueDay === 3 )
-        return DueDay.WEDNESDAY
+        return DueDay.THURSDAY
     return DueDay.NONE
 }
 
@@ -18,7 +18,7 @@ export function dayInET(now: Date) {
 
 
 export function getDays(now: Date, dueDay: number) {
-    return mod(6 - dayInET(now) + dueDay, 7)
+    return mod(dueDay - dayInET(now), 7)
 }
 
 

@@ -127,7 +127,7 @@
 
 /* ****************************** ACCORDIONS ****************************** */
 .accordion-mission-group {
-  max-width: auto;
+  max-width: 750px;
   margin:auto;
   overflow: unset;
   border-block-end-color: hsl(var(--separators));
@@ -148,7 +148,7 @@
   border-top-width:0px;
   border-bottom-width:0px;
   background-color: hsl(var(--card-mission-background-hover));
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 .accordion-mission-trigger {
@@ -177,6 +177,7 @@
 .card {
   border-color: transparent;
   box-shadow: -3px 3px 2px 1px hsl(var(--card-shadow));
+  border-radius: 10px;
 }
 
 .card-mission {
@@ -185,11 +186,11 @@
   background-color: transparent;
   border-block-start-color: transparent;
   border-block-end-color: transparent;
-  border-block-color: transparent;
-  border-radius: 15px;
   padding: 0px;
   max-width: 700px;
   margin:auto;
+  border-block-color: transparent;
+  border-radius: 25px;
 }
 
 .card-mission-content {
@@ -200,7 +201,7 @@
   margin:auto;
   border-block-color: transparent;
   border-block-width: 0px;
-  border-radius: 10px;
+  border-radius: 25px;
 }
 
 
