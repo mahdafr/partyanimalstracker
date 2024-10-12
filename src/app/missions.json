@@ -1,28 +1,28 @@
 {
     "woof_daily" : [
-        {"required":1, "prompt": "Use a Team Woof member in 1 game", "reward": "800 XP"},
-        {"required":1, "prompt": "Use a Team Woof member and win 1 round in Last Stand", "reward": "900 XP"},
-        {"required":2, "prompt": "Use a Team Woof member and select 2 different Pawers in SMASH games in total", "reward": "900 XP"}
+        {"required":10, "prompt": "Use a Team Woof member and perform 10 Drift boosts in total in Nemo Kart", "reward": "300 XP"},
+        {"required":100, "prompt": "Use a Team Woof member and accumulate 100 points in total in SMASH", "reward": "700 XP"},
+        {"required":2, "prompt": "Use a Team Woof member and play 2 various Quick Match modes", "reward": "1800 XP"}
     ],
     "woof_weekly" : [
-        {"required":30, "prompt": "Use a Team Woof member and use 30 items in Nemo Kart", "reward": "700 XP"},
-        {"required":5, "prompt": "Use a Team Woof member and knock out 5 opponents with Melee Weapons in total", "reward": "900 XP"},
-        {"required":3, "prompt": "Use 3 different Team Woof members to play games", "reward": "4000 XP"}
+        {"required":2, "prompt": "Use a Team Woof member and knock out 2 opponents without weeapons", "reward": "1400 XP"},
+        {"required":2, "prompt": "Use 2 different Team Woof members to play games", "reward": "3000 XP"},
+        {"required":8, "prompt": "Use and Team Woof member and select 8 different Pawers in SMASH games in total", "reward": "4000 XP"}
     ],
     "meow_daily" : [
-        {"required":1, "prompt": "Use a Team Meow member in 1 game", "reward": "700 XP"},
-        {"required":100, "prompt": "Use a Team Meow member and accumulate 100 points in total in SMASH", "reward": "700 XP"},
-        {"required":8, "prompt": "Use a Team Meow member and survive for 8 minutes in Last Stand maps", "reward": "1200 XP"}
+        {"required":1, "prompt": "Use a Team Meow member in 1 game", "reward": "800 XP"},
+        {"required":2, "prompt": "Use a Team Meow member and select 2 different Pawers in SMASH games in total", "reward": "1000 XP"},
+        {"required":1, "prompt": "Use 1 edible item in Last Stand maps", "reward": "1000 XP"}
     ],
     "meow_weekly" : [
-        {"required":1, "prompt": "Use a Team Meow member and select Pawer 1 time in SMASH game", "reward": "1800 XP"},
-        {"required":5, "prompt": "Use a Team Meow member and knock out 5 opponents with melee weapons in total", "reward": "2600 XP"},
-        {"required":4, "prompt": "Use a Team Meow member in 4 games", "reward": "2800 XP"}
+        {"required":2, "prompt": "Use a Team Meow member in 2 games", "reward": "1500 XP"},
+        {"required":3, "prompt": "Use a Team Meow member and play 3 different maps", "reward": "2300 XP"},
+        {"required":8, "prompt": "Use a Team Meow member and knock out 8 opponents in total", "reward": "4600 XP"}
     ],
     "weeklies" : [
-        {"required":10, "prompt": "Knock out 10 opponents with Headbutt in total", "reward": "1000 XP"},
-        {"required":10, "prompt": "Use an animal that can dive and win 10 Quick Matches", "reward": "3000 cookies"},
-        {"required":5, "prompt": "Use an animal that can fly and win 5 rounds in Last Stand Quick Matches", "reward": "2000 XP"},
-        {"required":5, "prompt": "Use a feline in 5 Last Stand Quick Matches", "reward": "3000 XP"}
+        {"required":15, "prompt": "Knock out 15 opponents without weapons", "reward": "1000 XP"},
+        {"required":10, "prompt": "Knock out 10 opponents with Melee Weapons in total", "reward": "3000 cookies"},
+        {"required":5, "prompt": "Use fluffy animals and win 2 Last Stand games", "reward": "2000 XP"},
+        {"required":5, "prompt": "Use animal that can dive in 15 games", "reward": "3000 XP"}
     ]
 }
