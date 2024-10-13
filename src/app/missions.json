@@ -1,8 +1,8 @@
 {
     "woof_daily" : [
-        {"required":10, "prompt": "Use a Team Woof member and perform 10 Drift boosts in total in Nemo Kart", "reward": "300 XP"},
-        {"required":100, "prompt": "Use a Team Woof member and accumulate 100 points in total in SMASH", "reward": "700 XP"},
-        {"required":2, "prompt": "Use a Team Woof member and play 2 various Quick Match modes", "reward": "1800 XP"}
+        {"required":4, "prompt": "Use a Team Woof member and survive for 4 minutes in Last Stand maps", "reward": "600 XP"},
+        {"required":100, "prompt": "Use a Team Woof member and accumulate 100 points in total in SMASH", "reward": "900 XP"},
+        {"required":2, "prompt": "Use a Team Woof member and play 2 different maps", "reward": "1400 XP"}
     ],
     "woof_weekly" : [
         {"required":2, "prompt": "Use a Team Woof member and knock out 2 opponents without weeapons", "reward": "1400 XP"},
@@ -11,8 +11,8 @@
     ],
     "meow_daily" : [
         {"required":1, "prompt": "Use a Team Meow member in 1 game", "reward": "800 XP"},
-        {"required":2, "prompt": "Use a Team Meow member and select 2 different Pawers in SMASH games in total", "reward": "1000 XP"},
-        {"required":1, "prompt": "Use 1 edible item in Last Stand maps", "reward": "1000 XP"}
+        {"required":30, "prompt": "Use a Team Meow member and perform 30 Drift boosts in total in Nemo Kart", "reward": "1000 XP"},
+        {"required":1, "prompt": "Use a Team Meow member and win 1 round in Last Stand", "reward": "1100 XP"}
     ],
     "meow_weekly" : [
         {"required":2, "prompt": "Use a Team Meow member in 2 games", "reward": "1500 XP"},
