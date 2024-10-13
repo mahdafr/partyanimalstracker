@@ -1,7 +1,7 @@
 "use client"
 
 import { sharedProgresses } from "./accordion_group";
-import { Mission } from "../mission/mission"
+import { Mission } from "../mission/mission_struct"
 import { getMissionProgressStatus, Status } from "../mission/progress"
 
 import { Badge } from "@/components/ui/badge"

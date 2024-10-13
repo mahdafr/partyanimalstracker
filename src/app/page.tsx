@@ -25,11 +25,11 @@ import {
 export default async function Page() {
   const file = await fs.readFile(process.cwd() + '/src/app/missions.json', 'utf8');
   const data_json = JSON.parse(file);
-  const woof_dailies = getMissions(data_json["woof_daily"], 3, true, true, "woof_daily");
-  const woof_weeklies = getMissions(data_json["woof_weekly"], 3, true, false, "woof_weekly");
-  const meow_dailies = getMissions(data_json["meow_daily"], 3, true, true, "meow_daily");
-  const meow_weeklies = getMissions(data_json["meow_weekly"], 3, true, false, "meow_weekly");
-  const weeklies = getMissions(data_json["weeklies"], 4, false, false, "weeklies");
+  const woof_dailies = getMissions(data_json, "woof_daily", 3, "WD");
+  const woof_weeklies = getMissions(data_json, "woof_weekly", 3, "WW");
+  const meow_dailies = getMissions(data_json, "meow_daily", 3, "MD");
+  const meow_weeklies = getMissions(data_json, "meow_weekly", 3, "MW");
+  const weeklies = getMissions(data_json, "weeklies", 4, "W");
 
   return (
     <div className="space-x-2 px-5 py-5" suppressHydrationWarning   style={{width:"100vw", maxWidth:"750px", margin:"auto"}}>
@@ -67,7 +67,7 @@ export default async function Page() {
               <Card className="card" style={{backgroundColor:"hsl(var(--background))"}}>
                 <CardHeader>
                   <CardTitle></CardTitle>
-                  <ClockCountdown daysLeft={false} dueDay={-1}/>
+                  <ClockCountdown daysLeft={false} dueDay={-1} />
                   {/* <p style={{fontSize:"xx-small", fontStyle:"italic", color:"hsl(var(--primary-progress))"}}>to midnight</p> */}
                 </CardHeader>
                 <CardDescription></CardDescription>
@@ -98,7 +98,7 @@ export default async function Page() {
               <Card className="card" style={{backgroundColor:"hsl(var(--background))"}}>
                 <CardHeader>
                   <CardTitle></CardTitle>
-                  <ClockCountdown daysLeft={true} dueDay={3} />
+                  <ClockCountdown daysLeft={true} dueDay={4} />
                 </CardHeader>
                 <CardDescription>
                 </CardDescription>

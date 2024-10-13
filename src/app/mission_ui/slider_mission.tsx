@@ -1,7 +1,7 @@
 "use client"
 
 import { Slider } from "@/components/ui/slider"
-import { Mission } from "../mission/mission"
+import { Mission } from "../mission/mission_struct"
 import { sharedProgresses } from "./accordion_group";
 import { update } from "../mission/cookies"
 import { jua } from "../fonts";

@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Clock } from "lucide-react"
 import { jua } from "../fonts"
 
-import { getDueDayEnum, getDays, mod } from "./time_utils"
+import { getDaysTil, mod } from "./time_utils"
 
 
 interface ClockCountdownProps<TValue> {
@@ -27,7 +27,7 @@ export function ClockCountdown<TValue>({daysLeft, dueDay} : ClockCountdownProps<
   }, []);
 
   const now = new Date();
-  var days = getDays(now, getDueDayEnum(dueDay).id)
+  var days = getDaysTil(now, dueDay)
   var hrs = 23 - mod(now.getUTCHours() - 4, 24) // ET is 4 hours behind of UTC
   var mins = 59 - now.getUTCMinutes()
   var secs = 59 - now.getUTCSeconds()

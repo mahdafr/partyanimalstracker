@@ -1,6 +1,6 @@
 'use client'
 
-import { Mission } from "../mission/mission"
+import { Mission } from "../mission/mission_struct"
 import { BadgeGroupM } from "../mission_ui/badge_group"
 
 import React from "react";

@@ -1,6 +1,6 @@
 "use client"
 
-import { Mission } from './mission'
+import { Mission } from './mission_struct'
 import { getCookie, setCookie, hasCookie } from 'cookies-next';
 
 // load from cookies; if CNF, progress is 0

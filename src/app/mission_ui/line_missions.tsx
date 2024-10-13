@@ -2,7 +2,7 @@
 
 import { ProgressM } from "./progress_mission"
 import { SliderM } from "./slider_mission"
-import { Mission } from "../mission/mission"
+import { Mission } from "../mission/mission_struct"
 
 
 interface LineMProps<Mission> {

@@ -1,5 +1,5 @@
 import { LineM } from "./line_missions"
-import { Mission } from "../mission/mission"
+import { Mission } from "../mission/mission_struct"
 import { BadgeProgressM } from "./badge_mission"
 
 import {
