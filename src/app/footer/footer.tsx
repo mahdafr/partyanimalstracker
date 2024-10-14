@@ -1,21 +1,27 @@
+import { ButtonRequestM } from './../mission_ui/button_missionrequest'
+
 import { Separator } from "@/components/ui/separator"
-import { Button } from "@/components/ui/button"
-import { BookPlus } from "lucide-react"
+
+const { execSync } = require('child_process');
+const cmd = 'git log -1 HEAD'
+
 
 export function Footer() {
+    const cmd_out = execSync(cmd).toString();
+    // get the Date component, then tokenize that string by ',' and ' ' to get: [DAY,MMM,DD]
+    var arr:string[] = cmd_out.split('Date:')[1].split(',')[0].split(' ')
+    // because 0-2 are empty strings, get DAY MMM DD as a readable string
+    var date:string = arr[3] + ' ' + (new Date(arr[4]+'-1-01').getMonth()+1).toString() + '/' + arr[5];
+
     return (
         <div style={{margin:"auto"}}>
             {/* GET MISSIONS FROM USER */}
-            <div className="footer-centered" style={{paddingTop:"16px", paddingBottom:"10px", maxWidth:"350px", margin:"auto"}}>
-                <p className="w-full footer-text" style={{textAlign:"right"}}>
-                    <em>Missions not updated?</em>
+            <div className="footer-centered" style={{paddingTop:"16px", paddingBottom:"10px", maxWidth:"450px", margin:"auto"}}>
+                <p className="w-full footer-text" style={{textAlign:"right", marginLeft:"5px"}}>
+                    <em>Last updated: </em>
+                    <em style={{color:"hsl(var(--foreground))"}}>{date}</em>
                 </p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSetR8h3Y5ILsj9HD3dJVvKjjDDzADtqwq7wyMJZWwuuB8M8ug/viewform?usp=sf_link" 
-                    className="w-full" >
-                    <Button variant="ghost"><BookPlus/>
-                        <p style={{marginInlineStart:"5px"}}>Submit your missions</p>
-                    </Button>
-                </a>
+                <ButtonRequestM marginRt="5px"></ButtonRequestM>
             </div>
 
             <Separator className="my-3 separator-line" style={{width:"95%"}} />

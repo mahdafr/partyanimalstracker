@@ -17,6 +17,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { ButtonRequestM } from "../mission_ui/button_missionrequest"
 
 export const Sidebar = () => {
     return (
@@ -64,9 +65,7 @@ export const Sidebar = () => {
                         <a href="https://www.x.com/partyanimalsmt">
                             <Button variant="ghost"><Twitter/><p style={{marginInlineStart:"5px"}}>@partyanimalsmt</p></Button>
                         </a>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSetR8h3Y5ILsj9HD3dJVvKjjDDzADtqwq7wyMJZWwuuB8M8ug/viewform?usp=sf_link">
-                            <Button variant="ghost"><BookPlus/><p style={{marginInlineStart:"5px"}}>Submit your missions</p></Button>
-                        </a>
+                        <ButtonRequestM marginRt="0px"></ButtonRequestM>
                     </div>
                     <SheetClose/>
                 </SheetFooter>
