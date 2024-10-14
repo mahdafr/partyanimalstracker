@@ -19,7 +19,7 @@ export function Footer() {
             <div className="footer-centered" style={{paddingTop:"16px", paddingBottom:"10px", maxWidth:"450px", margin:"auto"}}>
                 <p className="w-full footer-text" style={{textAlign:"right", marginLeft:"5px"}}>
                     <em>Last updated: </em>
-                    <em style={{color:"hsl(var(--foreground))"}}>{date}</em>
+                    <em style={{color:"hsl(var(--foreground))", fontWeight:"bold"}}>{date}</em>
                 </p>
                 <ButtonRequestM marginRt="5px"></ButtonRequestM>
             </div>
