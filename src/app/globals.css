@@ -294,6 +294,12 @@
 
 
 /* ****************************** PAGE ****************************** */
+.inline {
+  display: flex;
+  justify-content: center;
+  margin-inline:-10px;
+}
+
 .navigation-header {
   display: flex;
   justify-content: space-between;
@@ -305,10 +311,10 @@
   justify-content: center;
 }
 
-.inline {
-  display: flex;
-  justify-content: center;
-  margin-inline:-10px;
+.svg-overlay {
+  position: absolute;
+  float: left;
+  /* transform-origin: inherit; */
 }
 
 

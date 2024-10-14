@@ -1,11 +1,10 @@
 import { getMissions } from "./mission/mission"
-import { ThemeButton } from "./header/button_theme"
-import { Sidebar } from "./header/sidebar_about"
 import { Footer } from "./footer/footer"
 import { AccordionMGroup } from "./mission_ui/accordion_group"
 import { ClockCountdown } from "./time/clock_timeleft"
-import { concertone, jua } from "./fonts"
 import { promises as fs } from 'fs';
+
+import { jua } from "./fonts"
 
 import {
   Tabs,
@@ -20,6 +19,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Header } from "./header/header"
 
 
 export default async function Page() {
@@ -36,16 +36,7 @@ export default async function Page() {
       <Card className="card justify-center">
         <CardHeader>
           <CardTitle>
-            <div className={concertone.className}>
-              {/* header buttons */}
-              <div className="navigation-header">
-                <ThemeButton/>
-                <Sidebar/>
-              </div>
-              {/* title and description */}
-              <h1>PARTY ANIMALS</h1>
-              <h2>Mission Tracker</h2>
-            </div>
+            <Header></Header>
           </CardTitle>
         </CardHeader>
         <CardDescription className="w-full" style={{color:"hsl(var(--foreground))", padding:"25px"}}>
