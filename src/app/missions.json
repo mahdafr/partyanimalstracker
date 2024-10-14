@@ -20,9 +20,9 @@
         {"required":8, "prompt": "Use a Team Meow member and knock out 8 opponents in total", "reward": "4600 XP", "dueDate": "4"}
     ],
     "weeklies" : [
-        {"required":15, "prompt": "Knock out 15 opponents without weapons", "reward": "1000 XP", "dueDate": "0"},
-        {"required":10, "prompt": "Knock out 10 opponents with Melee Weapons in total", "reward": "2000 XP", "dueDate": "0"},
-        {"required":2, "prompt": "Use fluffy animals and win 2 Last Stand games", "reward": "3000 cookies", "dueDate": "0"},
-        {"required":15, "prompt": "Use animal that can dive in 15 games", "reward": "3000 XP", "dueDate": "0"}
+        {"required":30, "prompt": "Use an animal that can fly to hit player 30 times in Last Stand maps", "reward": "1000 XP", "dueDate": "0"},
+        {"required":6, "prompt": "Use a feline in 6 games", "reward": "3000 cookies", "dueDate": "0"},
+        {"required":10, "prompt": "Throw fish and hit 10 opponents as spectator", "reward": "2000 XP", "dueDate": "0"},
+        {"required":3, "prompt": "Use plant-eating animal and win 3 Last Stand games", "reward": "3000 XP", "dueDate": "0"}
     ]
 }
