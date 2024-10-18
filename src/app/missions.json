@@ -5,9 +5,9 @@
         {"required":1, "prompt": "Use 1 edible items in Last Stand maps", "reward": "1100 XP", "dueDate": "-1"}
     ],
     "woof_weekly" : [
-        {"required":2, "prompt": "Use a Team Woof member and knock out 2 opponents without weeapons", "reward": "1400 XP", "dueDate": "4"},
-        {"required":2, "prompt": "Use 2 different Team Woof members to play games", "reward": "3000 XP", "dueDate": "4"},
-        {"required":8, "prompt": "Use and Team Woof member and select 8 different Pawers in SMASH games in total", "reward": "4000 XP", "dueDate": "4"}
+        {"required":2, "prompt": "Use a Team Woof member in 2 games", "reward": "2600 XP", "dueDate": "4"},
+        {"required":3, "prompt": "Use a Team Woof member and play 3 different maps", "reward": "3200 XP", "dueDate": "4"},
+        {"required":8, "prompt": "Use and Team Woof member and knock out 8 opponents in total", "reward": "3200 XP", "dueDate": "4"}
     ],
     "meow_daily" : [
         {"required":4, "prompt": "Use a Team Meow member and survive for 4 minutes in Last Stand maps", "reward": "500 XP", "dueDate": "-1"},
@@ -15,9 +15,9 @@
         {"required":2, "prompt": "Use a Team Meow member in 2 games", "reward": "1400 XP", "dueDate": "-1"}
     ],
     "meow_weekly" : [
-        {"required":2, "prompt": "Use a Team Meow member in 2 games", "reward": "1500 XP", "dueDate": "4"},
-        {"required":3, "prompt": "Use a Team Meow member and play 3 different maps", "reward": "2300 XP", "dueDate": "4"},
-        {"required":8, "prompt": "Use a Team Meow member and knock out 8 opponents in total", "reward": "4600 XP", "dueDate": "4"}
+        {"required":1, "prompt": "Use a Team Meow member in 1 Team Score game", "reward": "1700 XP", "dueDate": "4"},
+        {"required":3, "prompt": "Use a Team Meow member and play 3 various Quick Match modes", "reward": "2300 XP", "dueDate": "4"},
+        {"required":500, "prompt": "Use a Team Meow member and accumulate 500 points in total in SMASH", "reward": "4600 XP", "dueDate": "4"}
     ],
     "weeklies" : [
         {"required":30, "prompt": "Use an animal that can fly to hit player 30 times in Last Stand maps", "reward": "1000 XP", "dueDate": "0"},
