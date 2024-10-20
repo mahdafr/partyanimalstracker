@@ -28,7 +28,7 @@ export function SliderM({mission}: SliderMProps) {
                     <Slider
                         defaultValue={[progress]}
                         max={mission.required}
-                        step={mission.required > 50 ? 50 : 1}
+                        step={mission.required >= 50 ? 50 : 1}
                         onValueChange = {(i) => setProgress(i[0])}
                         onValueCommit = {(i) => handleChange(mission, i[0])}
                     />
