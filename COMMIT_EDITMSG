@@ -1,0 +1,14 @@
+Revert "Bump cookie and cookies-next (#1)"
+
+This reverts commit 2f108207c0c3df234907a095bc102e1e968762d9.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   package-lock.json
+#	modified:   package.json
+#
