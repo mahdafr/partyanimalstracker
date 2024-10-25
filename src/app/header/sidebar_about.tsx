@@ -55,7 +55,7 @@ export const Sidebar = () => {
                             </p>
                             <p style={{padding:"10px"}}></p>
                             <p className="w-full" style={{fontSize:"0.9rem", lineHeight:"1.5rem", color:"hsl(var(--foreground))"}}>
-                                Who am I? Check out my <a href="https://www.instagram.com/mishalovehatestech/">Instagram</a>.
+                                Who am I? Check out my <a href="https://www.instagram.com/justalilstitious/">Instagram</a>.
                             </p>
                         </div>
                     </SheetDescription>
