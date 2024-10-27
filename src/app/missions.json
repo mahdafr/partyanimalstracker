@@ -1,8 +1,8 @@
 {
     "woof_daily" : [
-        {"required":1, "prompt": "Use a Team Woof member in 1 game", "reward": "900 XP", "dueDate": "-1"},
-        {"required":30, "prompt": "Use a Team Woof member and perform 30 Drift boosts in total in Nemo Kart", "reward": "1000 XP", "dueDate": "-1"},
-        {"required":2, "prompt": "Use a Team Woof Member and select 2 different Pawers in SMASH games in total", "reward": "1200 XP", "dueDate": "-1"}
+        {"required":50, "prompt": "Use a Team Woof member and accumulate 50 points in total in SMASH", "reward": "400 XP", "dueDate": "-1"},
+        {"required":4, "prompt": "Use a Team Woof member and survive for 4 minutes in Last Stand maps", "reward": "600 XP", "dueDate": "-1"},
+        {"required":2, "prompt": "Use a Team Woof Member and play 2 various Quick Match modes", "reward": "2100 XP", "dueDate": "-1"}
     ],
     "woof_weekly" : [
         {"required":1, "prompt": "Use a Team Woof member in 1 Team Score game", "reward": "2200 XP", "dueDate": "4"},
@@ -10,9 +10,9 @@
         {"required":500, "prompt": "Use a Team Woof member and accumulate 500 points in total in SMASH", "reward": "3700 XP", "dueDate": "4"}
     ],
     "meow_daily" : [
-        {"required":50, "prompt": "Use a Team Meow member and accumulate 50 points in total in SMASH", "reward": "400 XP", "dueDate": "-1"},
-        {"required":4, "prompt": "Use a Team Meow member and survive for 4 minutes in Last Stand maps", "reward": "600 XP", "dueDate": "-1"},
-        {"required":2, "prompt": "Use a Team Meow member and play 2 different maps", "reward": "2100 XP", "dueDate": "-1"}
+        {"required":1, "prompt": "Use a Team Meow member in 1 game", "reward": "800 XP", "dueDate": "-1"},
+        {"required":10, "prompt": "Use a Team Meow member to hit players 10 times in Last Stand maps", "reward": "1100 XP", "dueDate": "-1"},
+        {"required":150, "prompt": "Use a Team Meow member and accumulate 150 points in total in SMASH", "reward": "1200 XP", "dueDate": "-1"}
     ],
     "meow_weekly" : [
         {"required":30, "prompt": "Use a Team Meow member and use 30 items in Nemo Kart", "reward": "2700 XP", "dueDate": "4"},
