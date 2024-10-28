@@ -20,9 +20,9 @@
         {"required":3, "prompt": "Use 3 different Team Meow members to play games", "reward": "3300 XP", "dueDate": "4"}
     ],
     "weeklies" : [
-        {"required":4, "prompt": "Play 4 games", "reward": "1000 XP", "dueDate": "0"},
-        {"required":5, "prompt": "Use 5 edible items in total in Last Stand maps", "reward": "2000 XP", "dueDate": "0"},
-        {"required":2, "prompt": "Use canine and win 2 games", "reward": "3000 cookies", "dueDate": "0"},
-        {"required":5, "prompt": "Use feline in 5 Last Stand games", "reward": "3000 XP", "dueDate": "0"}
+        {"required":15, "prompt": "Knock out 15 opponents with Dropkick in total", "reward": "1000 XP", "dueDate": "0"},
+        {"required":10, "prompt": "Use meat-eating animal in 10 games", "reward": "3000 cookies", "dueDate": "0"},
+        {"required":5, "prompt": "Use plant-eating animal and win 5 rounds in Last Stand in total", "reward": "2000 XP", "dueDate": "0"},
+        {"required":5, "prompt": "Use egg-laying animal in 5 Last Stand games", "reward": "3000 XP", "dueDate": "0"}
     ]
 }
