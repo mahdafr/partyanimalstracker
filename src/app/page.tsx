@@ -57,7 +57,7 @@ export default async function Page() {
                 </CardHeader>
                 <CardDescription></CardDescription>
                 <CardContent className="space-y-2 text-align center">
-                  There are no daily missions.
+                  <div className={jua.className}>There are no daily missions.</div>
                 </CardContent>
               </Card>
             </TabsContent>

@@ -1,28 +1,20 @@
 {
-    "woof_daily" : [
-        {"required":4, "prompt": "Use a Team Woof member and survive for 4 minutes in Last Stand maps", "reward": "700 XP", "dueDate": "-1"},
-        {"required":2, "prompt": "Use a Team Woof member and select 2 different Pawers in SMASH games in total", "reward": "800 XP", "dueDate": "-1"},
-        {"required":2, "prompt": "Use 2 different Team Woof members to play games", "reward": "1800 XP", "dueDate": "-1"}
-    ],
-    "woof_weekly" : [
-        {"required":1, "prompt": "Use a Team Woof member in 1 Team Score game", "reward": "2200 XP", "dueDate": "4"},
-        {"required":3, "prompt": "Use a Team Woof member and play 3 various Quick Match modes", "reward": "3400 XP", "dueDate": "4"},
-        {"required":500, "prompt": "Use a Team Woof member and accumulate 500 points in total in SMASH", "reward": "3700 XP", "dueDate": "4"}
-    ],
-    "meow_daily" : [
-        {"required":10, "prompt": "Use a Team Meow member and perform 10 Drift boosts in total in Nemo Kart", "reward": "400 XP", "dueDate": "-1"},
-        {"required":100, "prompt": "Use a Team Meow member and accumulate 100 points in total in SMASH", "reward": "900 XP", "dueDate": "-1"},
-        {"required":30, "prompt": "Use a Team Meow member and play for 30 minutes", "reward": "1900 XP", "dueDate": "-1"}
-    ],
-    "meow_weekly" : [
-        {"required":30, "prompt": "Use a Team Meow member and use 30 items in Nemo Kart", "reward": "2700 XP", "dueDate": "4"},
-        {"required":5, "prompt": "Use a Team Meow member and knock out 5 opponents with Melee Weapons in total", "reward": "3300 XP", "dueDate": "4"},
-        {"required":3, "prompt": "Use 3 different Team Meow members to play games", "reward": "3300 XP", "dueDate": "4"}
-    ],
     "weeklies" : [
-        {"required":15, "prompt": "Knock out 15 opponents with Dropkick in total", "reward": "1000 XP", "dueDate": "0"},
-        {"required":10, "prompt": "Use meat-eating animal in 10 games", "reward": "3000 cookies", "dueDate": "0"},
-        {"required":5, "prompt": "Use plant-eating animal and win 5 rounds in Last Stand in total", "reward": "2000 XP", "dueDate": "0"},
-        {"required":5, "prompt": "Use egg-laying animal in 5 Last Stand games", "reward": "3000 XP", "dueDate": "0"}
+        {"required":15,
+            "prompt": "Knock out 15 opponents with Dropkick in total",
+            "reward": "1000 XP",
+            "dueDate": "0"},
+        {"required":10,
+            "prompt": "Use meat-eating animal in 10 games",
+            "reward": "3000 cookies",
+            "dueDate": "0"},
+        {"required":5,
+            "prompt": "Use plant-eating animal and win 5 rounds in Last Stand in total",
+            "reward": "2000 XP",
+            "dueDate": "0"},
+        {"required":5,
+            "prompt": "Use egg-laying animal in 5 Last Stand games",
+            "reward": "3000 XP",
+            "dueDate": "0"}
     ]
 }

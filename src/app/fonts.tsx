@@ -9,14 +9,14 @@ export const concertone = Concert_One({
 
 export const jua = Jua({
     subsets: ["latin"],
-    display: "swap",
+    // display: "swap",
     weight: "400",
     preload: false,
 })
 
 export const playpen = Playpen_Sans({
     subsets: ["latin"],
-    display: "swap",
+    // display: "swap",
     weight: "400",
     preload: false,
   })
