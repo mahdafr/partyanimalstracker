@@ -36,7 +36,7 @@ export function AccordionMGroup<TValue, TData>({title, missions}: AccordionMGrou
     }
 
     return (
-        <Accordion type="single" collapsible className="w-full" >
+        <Accordion type="single" collapsible className="w-full" defaultValue={"mission-group-" + title} >
             <AccordionItem value={"mission-group-" + title} className="accordion-mission-group" >
                 <AccordionTrigger className="accordion-group-trigger">
                     <TitleMGroup title={title} missions={missions} />
