@@ -1,7 +1,7 @@
 {
     "weeklies" : [
         {"required":15,
-            "prompt": "Knock out 15 opponents with Dropkick in total",
+            "prompt": "Knock out 15 opponents with Heavy Punch in total",
             "reward": "1000 XP",
             "dueDate": "0"},
         {"required":10,
@@ -9,7 +9,7 @@
             "reward": "3000 cookies",
             "dueDate": "0"},
         {"required":5,
-            "prompt": "Use plant-eating animal and win 5 rounds in Last Stand in total",
+            "prompt": "Use animal with horns in its head and win 5 rounds in Last Stand in total",
             "reward": "2000 XP",
             "dueDate": "0"},
         {"required":5,
