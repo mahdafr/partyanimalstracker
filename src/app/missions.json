@@ -1,19 +1,19 @@
 {
     "weeklies" : [
-        {"required":15,
-            "prompt": "Knock out 15 opponents with Heavy Punch in total",
+        {"required":5,
+            "prompt": "Finish 5 games with a party",
             "reward": "1000 XP",
             "dueDate": "0"},
-        {"required":10,
-            "prompt": "Use meat-eating animal in 10 games",
+        {"required":3,
+            "prompt": "Use fluffy animals in 3 Last Stand games",
             "reward": "3000 cookies",
             "dueDate": "0"},
-        {"required":5,
-            "prompt": "Use animal with horns in its head and win 5 rounds in Last Stand in total",
+        {"required":60,
+            "prompt": "Use animal that can dive to hite players 60 times in Last Stand maps",
             "reward": "2000 XP",
             "dueDate": "0"},
-        {"required":5,
-            "prompt": "Use egg-laying animal in 5 Last Stand games",
+        {"required":10,
+            "prompt": "Use animal that can fly and win 10 rounds in Last Stand in total",
             "reward": "3000 XP",
             "dueDate": "0"}
     ]
