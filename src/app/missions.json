@@ -1,20 +1,20 @@
 {
     "weeklies" : [
-        {"required":15,
-            "prompt": "Knock out 15 opponents without weapons",
+        {"required":4,
+            "prompt": "Play 4 games",
             "reward": "1000 XP",
             "dueDate": "0"},
-        {"required":10,
-            "prompt": "Knock out 10 opponents with Melee Weapons in total",
+        {"required":5,
+            "prompt": "Use 5 edible items in total in Last Stand maps",
             "reward": "2000 XP",
             "dueDate": "0"},
-        {"required":2,
-            "prompt": "Use canine and win 2 Last Stand games",
-            "reward": "3000 cookies",
-            "dueDate": "0"},
-        {"required":15,
-            "prompt": "Use a feline in 15 games",
+        {"required":5,
+            "prompt": "Use feline in 5 Last Stand games",
             "reward": "3000 XP",
+            "dueDate": "0"},
+        {"required":2,
+            "prompt": "Use canine and win 2 games",
+            "reward": "3000 cookies",
             "dueDate": "0"}
     ]
 }
